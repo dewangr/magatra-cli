@@ -88,7 +88,7 @@ async function addItem() {
               v-model="namaTamu"
               name="namaTamu"
               type="text"
-              class="bg-alt-dark text-off-white opacity-70 rounded-sm"
+              class="bg-alt-dark text-off-white opacity-70 rounded-sm py-1 px-2"
               placeholder="Masukkan nama"
               required
             />
@@ -98,7 +98,7 @@ async function addItem() {
               required
               name="pesanUcapan"
               rows="2"
-              class="bg-alt-dark text-off-white opacity-70 rounded-sm"
+              class="bg-alt-dark text-off-white opacity-70 rounded-sm py-1 px-2"
               placeholder="Mohon doa restu untuk kedua mempelai"
             ></textarea>
             <button
