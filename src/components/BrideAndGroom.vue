@@ -13,7 +13,7 @@ import "./../assets/main.css";
         alt="..."
       />
       <div
-        class="main-content relative z-20 flex flex-col justify-end text-start h-screen mx-7 pb-15"
+        class="main-content relative z-20 flex flex-col justify-end text-start h-screen mx-7 pb-14"
       >
         <div class="infoPengantin">
           <p class="uppercase groomBride animated">The Groom</p>
@@ -34,7 +34,7 @@ import "./../assets/main.css";
               type="button"
               target="_blank"
               rel="noopener"
-              class="my-2"
+              class="my-2 underline"
               ><i class="fa fa-instagram" aria-hidden="true"></i> indraa_wn</a
             >
           </div>
@@ -53,7 +53,7 @@ import "./../assets/main.css";
         alt="..."
       />
       <div
-        class="main-content relative z-20 flex flex-col justify-end text-start h-screen mx-7 pb-15"
+        class="main-content relative z-20 flex flex-col justify-end text-start h-screen mx-7 pb-14"
       >
         <div class="infoPengantin">
           <p class="uppercase groomBride animated">The Bride</p>
@@ -73,7 +73,7 @@ import "./../assets/main.css";
               type="button"
               target="_blank"
               rel="noopener"
-              class="my-2"
+              class="my-2 underline"
               ><i class="fa fa-instagram" aria-hidden="true"></i>
               riikatriana_</a
             >
