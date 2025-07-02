@@ -19,7 +19,7 @@
           </h2>
           <hr />
         </div>
-        <div class="videoPrewed mt-2">
+        <div class="videoPrewed mt-2 animated">
           <iframe
             class="w-full min-h-60 aspect-video"
             src="https://www.youtube.com/embed/a0v-PI0giE4?si=Mhwv07jKiIOTGarx&amp;controls=1&autoplay=0&mute=1"
