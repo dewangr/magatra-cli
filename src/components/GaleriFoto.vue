@@ -74,13 +74,13 @@ const allImages = [
             >
               <div class="flex relative">
                 <img
-                  class="to-display lg:w-40 lg:h-40 w-34 h-34"
+                  class="rounded-[4px] object-cover shadow-md lg:w-40 lg:h-40 w-32 h-32"
                   :src="img"
                   loading="lazy"
                 />
                 <p
                   v-if="i === visibleCount - 1"
-                  class="absolute lg:w-40 lg:h-40 w-34 h-34 flex items-center justify-center text-off-white bg-alt-dark/60"
+                  class="absolute lg:w-40 lg:h-40 w-32 h-32 flex items-center justify-center text-off-white bg-alt-dark/60"
                 >
                   Show more...
                 </p>
@@ -104,11 +104,3 @@ const allImages = [
     </div>
   </div>
 </template>
-<style>
-.to-display {
-  border-radius: 4px;
-  box-shadow: 0 1px 2px 0 var(--color-alt-dark);
-  object-fit: cover;
-  -o-object-fit: cover;
-}
-</style>
