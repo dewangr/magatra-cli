@@ -35,7 +35,7 @@ defineProps({
             Om Swastyastu
           </p>
           <p class="animated">
-            Atas Asung Kerta Nugraha Ida Sang Hyang Widhi Wasa, kami bermaksud
+            Atas Asung Kerta Wara Nugraha Ida Sang Hyang Widhi Wasa, kami bermaksud
             mengundang Bapak/Ibu/Saudara/i untuk hadir pada upacara Manusa
             Yadnya pawiwahan putra-putri kami.
           </p>
