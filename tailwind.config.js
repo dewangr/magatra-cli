@@ -332,6 +332,9 @@ module.exports = {
         '"Courier New"',
         "monospace",
       ],
+      karla: ["Karla", "sans-serif"],
+      basic: ["Basic", "sans-serif"],
+      rougeScript: ["RougeScript", "sans-serif"],
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],

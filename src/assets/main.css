@@ -55,32 +55,9 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --font-rougeScript: "RougeScript", sans-serif;
-
-  --font-karla: "Karla", sans-serif;
-  --font-karla-italic: "Karla-Italic", sans-serif;
-  --font-karla-bold: "Karla-Bold", sans-serif;
-
-  --font-basic: "Basic", sans-serif;
-
   --color-putih-keabuan: #c1cdd8;
   --color-off-white: #f5f5f5;
   --color-alt-dark: #1a1d21;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    background-color: var(--color-alt-dark);
-    color: var(--color-putih-keabuan);
-    -webkit-text-fill-color: var(--color-putih-keabuan);
-  }
-  a:hover {
-    color: var(--color-alt-dark);
-    -webkit-text-fill-color: var(--color-alt-dark);
-  }
-  button {
-    background-color: var(--color-alt-dark);
-  }
 }
 
 .txt-wedding-of {
