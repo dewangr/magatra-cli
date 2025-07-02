@@ -101,12 +101,6 @@ async function addItem() {
               class="bg-alt-dark text-off-white opacity-70 rounded-sm"
               placeholder="Mohon doa restu untuk kedua mempelai"
             ></textarea>
-            <!-- <label for="kehadiran" class="mt-3" placeholder="Konfirmasi kehadiran">Konfirmasi</label> -->
-            <!-- <select v-model="kehadiran" required name="kehadiran"
-                            class="bg-alt-dark text-off-white opacity-70 rounded-sm" id="konfirmasiKehadiran">
-                            <option value="1">Iya, saya hadir</option>
-                            <option value="0">Maaf tidak bisa hadir</option>
-                        </select> -->
             <button
               type="submit"
               class="mt-3 btn-submit px-4 py-1 rounded-md bg-alt-dark text-off-white w-max"
