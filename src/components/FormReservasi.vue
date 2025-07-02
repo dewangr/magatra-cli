@@ -83,7 +83,7 @@ async function addItem() {
             method="post"
             class="formReservasi flex flex-col animated"
           >
-            <label for="namaTamu" class="mt-3">Nama</label>
+            <label for="namaTamu" class="mt-3 text-off-white">Nama</label>
             <input
               v-model="namaTamu"
               name="namaTamu"
@@ -92,7 +92,7 @@ async function addItem() {
               placeholder="Masukkan nama"
               required
             />
-            <label for="pesanUcapan" class="mt-3">Ucapan</label>
+            <label for="pesanUcapan" class="mt-3 text-off-white">Ucapan</label>
             <textarea
               v-model="ucapan"
               required
