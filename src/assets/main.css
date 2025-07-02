@@ -51,9 +51,6 @@ a {
   font-family: "Karla", sans-serif;
   font-size: 14x;
 
-  color: var(--color-putih-keabuan);
-  -webkit-text-fill-color: var(--color-putih-keabuan);
-
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
