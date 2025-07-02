@@ -51,13 +51,12 @@ a {
   font-family: "Karla", sans-serif;
   font-size: 14x;
 
+  color: var(--color-putih-keabuan);
+  -webkit-text-fill-color: var(--color-putih-keabuan);
+
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  --color-putih-keabuan: #c1cdd8;
-  --color-off-white: #f5f5f5;
-  --color-alt-dark: #1a1d21;
 }
 
 .txt-wedding-of {
