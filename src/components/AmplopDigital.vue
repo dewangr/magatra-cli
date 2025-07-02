@@ -15,13 +15,13 @@ import BankDetails from "./BankDetails.vue";
       <div
         class="main-content relative z-20 flex flex-col justify-center text-start h-screen mx-7"
       >
-        <div class="textAwalan animated">
+        <div class="textAwalan animated text-off-white">
           <h2 class="uppercase font-basic my-2 tracking-[0.3rem] text-2xl">
             Amplop Digital
           </h2>
           <hr />
         </div>
-        <div class="hariTanggal my-2 animated">
+        <div class="hariTanggal my-2 animated text-off-white">
           <p>
             Tanpa mengurangi rasa hormat kami, bagi tamu yang ingin mengirimkan
             hadiah kepada kedua mempelai dapat mengirimnya melalui :

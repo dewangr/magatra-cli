@@ -36,7 +36,9 @@ const carouselSlides = [
       </div>
       <div class="main-content z-10 mb-20">
         <NamaPengantin />
-        <div class="ayatWeda flex flex-col mx-5 text-center animated">
+        <div
+          class="ayatWeda flex flex-col mx-5 text-center animated text-off-white"
+        >
           <p>
             “Wahai pasangan suami-istri, semoga kalian tetap bersatu dan tidak
             pernah terpisahkan. Semoga kalian mencapai hidup penuh kebahagiaan,

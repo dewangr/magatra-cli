@@ -15,7 +15,7 @@ const targetDate = new Date("2025-07-11T10:00:00"); // Set your target date here
         alt="..."
       />
       <div
-        class="main-content relative z-20 flex flex-col justify-center text-start h-3/4 mx-7"
+        class="main-content relative z-20 flex flex-col justify-center text-start h-3/4 mx-7 text-off-white"
       >
         <div class="waktuPelaksanaan">
           <h2

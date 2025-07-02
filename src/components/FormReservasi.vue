@@ -66,7 +66,7 @@ async function addItem() {
         class="main-content relative z-20 flex flex-col justify-center h-screen mx-7"
       >
         <div class="formReservasi flex flex-col">
-          <div class="textJudul animated">
+          <div class="textJudul animated text-off-white">
             <h2 class="uppercase font-basic mb-2 tracking-[0.3rem] text-2xl">
               RESERVASI
             </h2>

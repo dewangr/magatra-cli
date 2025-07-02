@@ -13,23 +13,27 @@ import "@/assets/main.css";
         alt="..."
       />
       <div class="main-content relative z-20 grid grid-rows-4 h-screen mx-7">
-        <div class="maturSuksma flex flex-col justify-center text-start">
-          <div class="textJudul animated">
+        <div
+          class="maturSuksma flex flex-col justify-center text-start text-off-white"
+        >
+          <div class="textJudul animated text-off-white">
             <h2 class="uppercase font-basic tracking-[0.3rem] text-2xl">
               Matur Suksma
             </h2>
             <hr class="my-2" />
           </div>
-          <p class="mb-2 animated">
+          <p class="mb-2 animated text-off-white">
             Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i
             berkenan hadir di hari bahagia kami.
           </p>
-          <p class="animated">
+          <p class="animated text-off-white">
             Atas kehadiran dan doa restu Bapak/Ibu/Saudara/i kami ucapkan terima
             kasih.
           </p>
         </div>
-        <div class="magatraDigital flex flex-col text-center justify-center">
+        <div
+          class="magatraDigital flex flex-col text-center justify-center text-off-white"
+        >
           <h5 class="font-rougeScript text-4xl">Magatra</h5>
           <p class="my-1">Digital Invitation © 2025</p>
           <div class="mediaSosial flex flex-row justify-center">

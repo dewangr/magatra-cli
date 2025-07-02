@@ -13,7 +13,7 @@ import "./../assets/main.css";
         alt="..."
       />
       <div
-        class="main-content relative z-20 flex flex-col justify-end text-start h-screen mx-7 pb-14"
+        class="main-content relative z-20 flex flex-col justify-end text-start h-screen mx-7 pb-14 text-off-white"
       >
         <div class="infoPengantin">
           <p class="uppercase groomBride animated">The Groom</p>
@@ -53,7 +53,7 @@ import "./../assets/main.css";
         alt="..."
       />
       <div
-        class="main-content relative z-20 flex flex-col justify-end text-start h-screen mx-7 pb-14"
+        class="main-content relative z-20 flex flex-col justify-end text-start h-screen mx-7 pb-14 text-off-white"
       >
         <div class="infoPengantin">
           <p class="uppercase groomBride animated">The Bride</p>

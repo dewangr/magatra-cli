@@ -1,6 +1,6 @@
 <script setup>
 import { defineComponent } from "vue";
-import { onMounted, ref } from "vue";
+import { onMounted, ref, defineProps} from "vue";
 
 import "./../assets/main.css";
 import NamaPengantin from "../components/NamaPengantin.vue";

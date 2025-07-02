@@ -28,7 +28,7 @@ defineProps({
       <div
         class="main-content relative z-20 flex flex-col justify-center text-end sm:w-[60%] md:w-full h-[55%] mx-7"
       >
-        <div class="">
+        <div class="text-off-white">
           <p
             class="font-basic tracking-widest leading-10 uppercase text-2xl animated"
           >

@@ -53,7 +53,7 @@ const allImages = [
       <div
         class="main-content relative z-10 flex flex-col justify-center h-[80%] mx-7"
       >
-        <div class="textAwalan animated">
+        <div class="textAwalan animated text-off-white">
           <h2
             class="uppercase font-basic my-2 tracking-[0.3rem] text-2xl text-start"
           >

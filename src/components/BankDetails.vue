@@ -37,7 +37,7 @@ document.getElementsByClassName("bankName").innerHTML = "Test Bank";
 </script>
 <template>
   <div class="bankAccount flex flex-row items-center">
-    <div class="bankAccountDetail w-2/3">
+    <div class="bankAccountDetail w-2/3 text-off-white">
       <p class="bankName text-sm font-basic">{{ bankName }}</p>
       <h5 class="bankNumber text-sm leading-3">{{ bankNumber }}</h5>
       <p class="holderName text-sm font-basic">{{ holderName }}</p>

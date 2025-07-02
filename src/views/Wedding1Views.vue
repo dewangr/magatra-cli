@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </h3>
             <button
               type="button"
-              class="btn-buka-undangan animated"
+              class="btn-buka-undangan animated text-alt-dark"
               id="btn-buka"
               @click="clickBukaUndangan()"
             >

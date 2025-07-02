@@ -13,7 +13,7 @@
       <div
         class="main-content relative z-20 flex flex-col justify-center text-start h-[60%] mx-7"
       >
-        <div class="textAwalan animated">
+        <div class="textAwalan animated text-off-white">
           <h2 class="uppercase font-basic my-2 tracking-[0.3rem] text-2xl">
             Cerita Kami
           </h2>
