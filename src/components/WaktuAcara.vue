@@ -1,3 +1,5 @@
+<!-- eslint-disable prettier/prettier -->
+<!-- eslint-disable prettier/prettier -->
 <script setup>
 import GetCountdown from "./GetCountdown.vue";
 
@@ -10,7 +12,7 @@ const targetDate = new Date("2025-08-28T11:00:00");
     ></div>
     <div class="relative h-screen">
       <img
-        src="../assets/photo/galeri/DSC03320.webp"
+        src="../assets/photo/background/bg-waktu.webp"
         class="object-cover absolute h-screen"
         alt="..."
       />
@@ -43,11 +45,11 @@ const targetDate = new Date("2025-08-28T11:00:00");
             rel="noopener"
             >Google Maps</a
           >
-          <iframe
+          <!-- <iframe
             class="w-full h-60 mt-2 rounded-md"
             src="https://maps.google.com/maps?q=-8.3235101,114.6224752&output=embed"
           >
-          </iframe>
+          </iframe> -->
         </div>
       </div>
     </div>

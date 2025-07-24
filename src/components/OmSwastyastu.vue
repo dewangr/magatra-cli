@@ -1,3 +1,4 @@
+<!-- eslint-disable -->
 <script setup>
 import "./../assets/main.css";
 
@@ -14,6 +15,7 @@ defineProps({
   },
 });
 </script>
+<!-- eslint-disable -->
 <template>
   <div class="relative w-full flex flex-col">
     <div
@@ -35,13 +37,14 @@ defineProps({
             Om Swastyastu
           </p>
           <p class="animated">
-            Atas Asung Kerta Wara Nugraha Ida Sang Hyang Widhi Wasa, kami bermaksud
-            mengundang Bapak/Ibu/Saudara/i untuk hadir pada upacara Manusa
-            Yadnya pawiwahan putra-putri kami.
+            Atas Asung Kerta Wara Nugraha Ida Sang Hyang Widhi Wasa, kami
+            bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir pada upacara
+            Manusa Yadnya pawiwahan putra-putri kami.
           </p>
         </div>
       </div>
     </div>
   </div>
 </template>
+<!-- eslint-disable -->
 <style scoped></style>

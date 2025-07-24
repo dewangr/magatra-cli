@@ -10,9 +10,9 @@ import GaleriFoto from "../components/GaleriFoto.vue";
 import NamaPengantin from "../components/NamaPengantin.vue";
 import MaturSuksma from "../components/MaturSuksma.vue";
 import FormReservasi from "../components/FormReservasi.vue";
-import WaktuMemadik from "../components/WaktuMemadik.vue";
 import { useRoute } from "vue-router";
 import { ref } from "vue";
+import WaktuAcara from "@/components/WaktuAcara.vue";
 
 const route = useRoute();
 const invitedPerson = ref(route.query.to || "nama tamu");
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <TopCarousel> </TopCarousel>
         <OmSwastyastu />
         <BrideAndGroom />
-        <WaktuMemadik />
+        <WaktuAcara />
         <VideoPrewed />
         <GaleriFoto />
         <FormReservasi />

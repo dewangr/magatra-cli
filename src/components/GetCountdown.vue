@@ -33,6 +33,13 @@ setInterval(function () {
   minutes = Math.floor((dateDistance % (1000 * 60 * 60)) / (1000 * 60));
   seconds = Math.floor((dateDistance % (1000 * 60)) / 1000);
 
+  if (days < 0) {
+    days = 0;
+    hours = 0;
+    minutes = 0;
+    seconds = 0;
+  }
+
   // Display the result in the element with id="demo"
   document.getElementById("daysDigit").innerHTML = days;
   document.getElementById("hoursDigit").innerHTML = hours;
@@ -40,10 +47,10 @@ setInterval(function () {
   document.getElementById("secondsDigit").innerHTML = seconds;
 }, 1000);
 
-const textDays = days === 1 ? "day" : "days";
-const textHours = hours === 1 ? "hour" : "hours";
-const textMinutes = minutes === 1 ? "minute" : "minutes";
-const textSeconds = seconds === 1 ? "second" : "seconds";
+const textDays = days <= 2 ? "day" : "days";
+const textHours = hours <= 2 ? "hour" : "hours";
+const textMinutes = minutes <= 2 ? "minute" : "minutes";
+const textSeconds = seconds <= 2 ? "second" : "seconds";
 </script>
 <template>
   <div class="countDays flex flex-col pr-2">
