@@ -2,7 +2,7 @@
 import "@/assets/main.css";
 </script>
 <template>
-  <div class="relative w-full flex flex-col pt-20 pb-3">
+  <div class="relative w-full flex flex-col pt-16 pb-3">
     <div class="main-content relative z-20 grid grid-rows-4 h-fit mx-7">
       <div class="magatraDigital flex flex-col text-center justify-center text-off-white">
         <h5 class="font-rougeScript text-4xl">Magatra</h5>
