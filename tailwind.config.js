@@ -166,6 +166,11 @@ module.exports = {
       "putih-keabuan": "#c1cdd8",
       "off-white": "#f5f5f5",
       "alt-dark": "#1a1d21",
+      "gold": "#FFD700",
+      "gold-dark": "#AF8F26",
+      "soft-gold": "#E3CDB3",
+      "bg-gold": "#FEFBEF",
+
     }),
     columns: {
       auto: "auto",
@@ -338,6 +343,13 @@ module.exports = {
       karla: ["Karla", "sans-serif"],
       basic: ["Basic", "sans-serif"],
       rougeScript: ["RougeScript", "sans-serif"],
+      dynalight: ["Dynalight", "cursive"],
+      tangerine: ["Tangerine", "cursive"],
+      greatVibes: ["Great Vibes", "cursive"],
+      playfairDisplay: ["Playfair Display", "serif"],
+      alexBrush: ["AlexBrush", "cursive"],
+      sirivennela: ["Sirivennela", "cursive"],
+      parisienne: ["Parisienne", "serif"],
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],
