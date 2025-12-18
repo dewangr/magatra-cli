@@ -1,4 +1,3 @@
-<!-- eslint-disable -->
 <script setup>
 import "./../assets/main.css";
 
@@ -15,7 +14,7 @@ defineProps({
   },
 });
 </script>
-<!-- eslint-disable -->
+
 <template>
   <div class="relative w-full flex flex-col">
     <div
@@ -46,5 +45,5 @@ defineProps({
     </div>
   </div>
 </template>
-<!-- eslint-disable -->
+
 <style scoped></style>

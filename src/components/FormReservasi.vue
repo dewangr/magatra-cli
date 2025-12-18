@@ -1,4 +1,4 @@
-<!-- eslint-disable prettier/prettier -->
+
 <script setup>
 import "@/assets/main.css";
 import CardUcapan from "./cardUcapan.vue";
@@ -109,7 +109,7 @@ async function addItem() {
             </button>
           </form>
           <div
-            class="hasilReservasi mt-7 flex flex-col max-h-56 overflow-y-scroll animated"
+            class="hasilReservasi mt-7 flex flex-col max-h-56 lg:max-h-48 overflow-y-scroll animated"
           >
             <CardUcapan
               v-for="(data, id) in rspvData"

@@ -2,9 +2,7 @@
 import "@/assets/main.css";
 
 import TopCarousel from "../components/TopCarousel.vue";
-import BrideAndGroom from "../components/BrideAndGroom.vue";
 import OmSwastyastu from "../components/OmSwastyastu.vue";
-import AmplopDigital from "../components/AmplopDigital.vue";
 import VideoPrewed from "../components/VideoPrewed.vue";
 import GaleriFoto from "../components/GaleriFoto.vue";
 import NamaPengantin from "../components/NamaPengantin.vue";
@@ -13,6 +11,9 @@ import FormReservasi from "../components/FormReservasi.vue";
 import { useRoute } from "vue-router";
 import { ref } from "vue";
 import WaktuAcara from "@/components/WaktuAcara.vue";
+import BrideProfile from "@/components/BrideProfile.vue";
+import GroomProfile from "@/components/GroomProfile.vue";
+import AmplopDigital from "@/components/AmplopDigital.vue";
 
 const route = useRoute();
 const invitedPerson = ref(route.query.to || "nama tamu");
@@ -71,8 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <template>
-  <main class="float-right w-screen md:w-md h-screen z-30">
-    <div id="sampulDepan" class="z-10 object-right w-screen md:w-md h-screen">
+  <main class="w-screen h-screen z-30">
+    <div
+      id="sampulDepan"
+      class="absolute z-10 inset-y-0 right-0 w-screen md:w-96 h-screen"
+    >
       <div class="relative w-full h-full">
         <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
         <div class="background-sampul absolute inset-0 z-0"></div>
@@ -104,17 +108,21 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       </div>
     </div>
-    <div id="kontenUtama" class="hidden md:w-md object-right">
+    <div
+      id="kontenUtama"
+      class="hidden absolute md:w-96 inset-y-0 right-0 snap-y snap-mandatory overflow-scroll"
+    >
       <div class="isiUndangan relative">
-        <TopCarousel> </TopCarousel>
-        <OmSwastyastu />
-        <BrideAndGroom />
-        <WaktuAcara />
-        <VideoPrewed />
-        <GaleriFoto />
-        <FormReservasi />
-        <AmplopDigital />
-        <MaturSuksma />
+        <TopCarousel class="snap-start"></TopCarousel>
+        <OmSwastyastu class="snap-start"></OmSwastyastu>
+        <BrideProfile class="snap-start"></BrideProfile>
+        <GroomProfile class="snap-start"></GroomProfile>
+        <WaktuAcara class="snap-start"></WaktuAcara>
+        <VideoPrewed class="snap-start"></VideoPrewed>
+        <GaleriFoto class="snap-start"></GaleriFoto>
+        <FormReservasi class="snap-start"></FormReservasi>
+        <AmplopDigital class="snap-start"></AmplopDigital>
+        <MaturSuksma class="snap-start"></MaturSuksma>
         <audio
           loop
           class="hidden"

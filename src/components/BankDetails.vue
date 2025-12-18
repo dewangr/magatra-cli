@@ -1,6 +1,3 @@
-<!-- eslint-disable prettier/prettier -->
-<!-- eslint-disable prettier/prettier -->
-<!-- eslint-disable prettier/prettier -->
 <script setup>
 import { defineProps } from "vue";
 

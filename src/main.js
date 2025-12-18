@@ -1,4 +1,3 @@
-/* eslint-disable */
 import "./assets/main.css";
 
 import { createApp } from "vue";

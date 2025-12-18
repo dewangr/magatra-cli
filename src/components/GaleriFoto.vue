@@ -74,13 +74,13 @@ const allImages = [
             >
               <div class="flex relative">
                 <img
-                  class="rounded-[4px] object-cover shadow-md lg:w-40 lg:h-40 w-32 h-32"
+                  class="rounded-[4px] object-cover shadow-md lg:w-34 lg:h-34 w-32 h-32"
                   :src="img"
                   loading="lazy"
                 />
                 <p
                   v-if="i === visibleCount - 1"
-                  class="absolute lg:w-40 lg:h-40 w-32 h-32 flex items-center justify-center text-off-white bg-alt-dark/60"
+                  class="absolute lg:w-34 lg:h-34 w-32 h-32 flex items-center justify-center text-off-white bg-alt-dark/60"
                 >
                   Show more...
                 </p>

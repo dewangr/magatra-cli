@@ -54,20 +54,16 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <div
-    class="textUcapan bg-off-white text-alt-dark p-3 rounded-sm mb-4 mx-2 opacity-70"
-  >
-    <div
-      class="namaDanKonfirmasi flex flex-row text-[14px] items-center justify-between"
-    >
-      <p class="namaTamuReservasi">
-        <strong>{{ namaTamu }} &nbsp;</strong>
+  <div class="textUcapan p-3 rounded-sm mb-4 mx-2 opacity-70">
+    <div class="namaDanKonfirmasi flex flex-row text-[16px] items-center justify-between">
+      <p class="namaTamuReservasi text-alt-dark tracking-wider">
+        <b>{{ namaTamu }} &nbsp;</b>
       </p>
       <!-- <span :class="iconColor">
                 <i :class="iconKehadiran" aria-hidden="true"></i></span> -->
     </div>
-    <p class="text-[16px]">{{ ucapan }}</p>
-    <p class="text-[10px] italic">{{ waktuKomentar }}</p>
+    <p class="text-[16px] text-alt-dark mb-1">{{ ucapan }}</p>
+    <p class="text-[10px] text-alt-dark/50 italic">{{ waktuKomentar }}</p>
   </div>
   <!-- <div class="textUcapan bg-off-white text-alt-dark p-3 rounded-sm mb-4 mx-2 opacity-80">
         <div class="namaDanKonfirmasi flex flex-row justify-between items-center">

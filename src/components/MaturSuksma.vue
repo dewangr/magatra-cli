@@ -45,14 +45,14 @@ import "@/assets/main.css";
                 aria-hidden="true"
               ></i
             ></a>
-            <a href="https://www.instagram.com/_dewangurah"
+            <!-- <a href="https://www.instagram.com/_dewangurah"
               ><i
                 class="fa fa-instagram mx-2"
                 target="_blank"
                 rel="noopener"
                 aria-hidden="true"
               ></i
-            ></a>
+            ></a> -->
           </div>
         </div>
       </div>
