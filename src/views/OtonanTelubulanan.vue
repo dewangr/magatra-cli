@@ -120,8 +120,7 @@ const descReservasi = "Silakan isi form dibawah ini untuk konfirmasi kehadiran A
           class="w-full items-center justify-center pt-12">
           <img class="w-48" src="../../public/photos/png/peony.webp" alt="">
         </div> -->
-        <div class="h-32 bg-gradient-to-b from-black/0 to-black/100"></div>
-        <MagatraCopyright class="bg-black pt-4 mt-0"></MagatraCopyright>
+        <MagatraCopyright class="bg-black"></MagatraCopyright>
         <audio loop class=" hidden" preload="none" id="bgm" controlsList="nodownload" controls>
           <source src="../assets/music/HarmoniA_ft_Rusmina_Dewi_-_Sehidup_Semati.mp3" type="audio/mp3" />
         </audio>
