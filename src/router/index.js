@@ -3,6 +3,7 @@ import Wedding1Views from "../views/Wedding1Views.vue";
 import TextOnlyViews1 from "../views/TextOnlyViews1.vue";
 import NotFoundView from "@/views/NotFoundView.vue";
 import OtonanTelubulanan from "@/views/OtonanTelubulanan.vue";
+import DekDwiManik from "@/views/DekDwiManik.vue";
 
 const routes = [
   {
@@ -15,6 +16,11 @@ const routes = [
     path: "/mangagus-dewi/",
     name: "TextOnlyViews1",
     component: TextOnlyViews1,
+    props: true,
+  },{
+    path: "/dekdwi-manik/",
+    name: "DekDwiManik",
+    component: DekDwiManik,
     props: true,
   },
   {
@@ -31,14 +37,13 @@ const routes = [
 
   {
     path: "/",
-    redirect: "/telubulanan/anakdika",
+    redirect: "/dekdwi-manik/",
   },
   {
     path: "/:catchAll(.*)",
     redirect: "/",
   },
 ];
-
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
