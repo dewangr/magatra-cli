@@ -1,7 +1,54 @@
 <script setup>
 import GetCountdown from "./GetCountdown.vue";
+import "./../assets/main.css";
+import { defineProps } from "vue";
 
-const targetDate = new Date("2025-08-28T11:00:00");
+const props = defineProps({
+  bgPath: {
+    type: String,
+    default: "background/bg-waktu.webp",
+  },
+  hariAcara: {
+    type: String,
+    default: "Kamis",
+  },
+  tglAcara: {
+    type: String,
+    default: "28/08/2025",
+  },
+  waktuMulai: {
+    type: String,
+    default: "11:00",
+  },
+  waktuSelesai: {
+    type: String,
+    required: false,
+    default: "Selesai",
+  },
+  alamatAcara: {
+    type: String,
+    default: "Jalan Desa Pendem, Jembrana",
+  },
+  linkMaps: {
+    type: String,
+    default: "https://www.google.com/maps?q=-8.3235101,114.6224752",
+  },
+});
+const dayjs = require('dayjs');   
+const customParseFormat = require('dayjs/plugin/customParseFormat');
+require('dayjs/locale/id');
+
+dayjs.extend(customParseFormat);
+dayjs.locale('id');
+
+let tanggalAcara = dayjs(props.tglAcara, "DD/MM/YYYY").format("DD MMMM YYYY");
+const targetDate = dayjs(props.tglAcara + " " + props.waktuMulai,"DD/MM/YYYY HH:mm").format("YYYY-MM-DDTHH:mm:ss");
+let targetDateFormatted = new Date(targetDate);
+
+let bgImage = require(`../assets/photo/${props.bgPath}`);
+
+console.log('bgPath = ' + props.bgPath);
+console.log('bgImage = ' + bgImage);
 </script>
 <template>
   <div class="relative w-full flex flex-col">
@@ -10,7 +57,7 @@ const targetDate = new Date("2025-08-28T11:00:00");
     ></div>
     <div class="relative h-screen">
       <img
-        src="../assets/photo/background/bg-waktu.webp"
+        :src="bgImage"
         class="object-cover absolute h-screen"
         alt="..."
       />
@@ -25,20 +72,20 @@ const targetDate = new Date("2025-08-28T11:00:00");
           </h2>
           <hr />
           <div class="hariTanggal my-2 animated">
-            <h4 class="bold text-xl">Kamis, 28 Agustus 2025</h4>
-            <p>11.00 WITA - Selesai</p>
+            <h4 class="bold text-xl">{{ hariAcara }}, {{ tanggalAcara }}</h4>
+            <p>{{ waktuMulai }} - {{ waktuSelesai }}</p>
             <div class="hitungMundur flex flex-row my-2 text-center">
-              <GetCountdown :targetDate="targetDate" :hideSeconds="false" />
+              <GetCountdown :targetDate="targetDateFormatted" :hideSeconds="false" />
             </div>
           </div>
         </div>
         <div class="tempatPelaksanaan mb-2 text-lg animated">
-          <h4>Jalan Desa Pendem, Jembrana</h4>
+          <h4>{{ alamatAcara }}</h4>
         </div>
 
         <div class="googleMaps my-2 text-lg animated">
           <a
-            href="https://www.google.com/maps?q=-8.3235101,114.6224752"
+            :href="linkMaps"
             type="button"
             class="underline"
             target="_blank"
