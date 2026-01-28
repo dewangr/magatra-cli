@@ -3,8 +3,25 @@ import "./../assets/main.css";
 import NamaPengantin from "../components/NamaPengantin.vue";
 import CarouselSlide from "./CarouselSlide.vue";
 import CarouselMain from "./CarouselMain.vue";
+import { defineProps } from "vue";
 
-const carouselSlides = [
+const props = defineProps({
+  groomName: {
+    type: String,
+    required: true,
+  },
+  brideName: {
+    type: String,
+    required: true,
+  },
+  slidesPath: {
+    type: Array,
+    required: true,
+    default: () => [],
+  },
+});
+
+const carouselSlides = props.slidesPath.length > 0 ? props.slidesPath : [
   "/photos/carousel/carousel1.webp",
   "/photos/carousel/carousel2.webp",
   "/photos/carousel/carousel3.webp",
@@ -35,7 +52,7 @@ const carouselSlides = [
         </div>
       </div>
       <div class="main-content z-10 mb-20">
-        <NamaPengantin />
+        <NamaPengantin :groom-name="props.groomName" :bride-name="props.brideName" />
         <div
           class="ayatWeda flex flex-col mx-5 text-center animated text-off-white"
         >
