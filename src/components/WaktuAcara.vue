@@ -47,8 +47,6 @@ let targetDateFormatted = new Date(targetDate);
 
 let bgImage = require(`../assets/photo/${props.bgPath}`);
 
-console.log('bgPath = ' + props.bgPath);
-console.log('bgImage = ' + bgImage);
 </script>
 <template>
   <div class="relative w-full flex flex-col">
