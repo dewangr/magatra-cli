@@ -1,5 +1,29 @@
 <script setup>
 import "./../assets/main.css";
+import { defineProps } from "vue";
+
+defineProps({
+  brideName: {
+    type: String,
+    default: "Luh Rika Triana Savitri, S.Kes",
+  },
+  anakKe: {
+    type: String,
+    default: "pertama",
+  },
+  fatherName: {
+    type: String,
+    default: "I Gede Karang",
+  },
+  motherName: {
+    type: String,
+    default: "Made Tuty Asrini, S.Sos",
+  },
+  igName: {
+    type: String,
+    default: "riikatriana_",
+  },
+});
 </script>
 <template>
   <div class="relative w-full flex flex-col">
@@ -18,25 +42,24 @@ import "./../assets/main.css";
         <div class="infoPengantin">
           <p class="uppercase groomBride animated">The Bride</p>
           <h3 class="font-basic text-2xl my-1 animated">
-            Luh Rika Triana Savitri, S.Kes
+            {{ brideName }}
           </h3>
           <div class="animated">
-            <p>Putri pertama dari</p>
+            <p>Putri {{ anakKe }} dari</p>
             <p>
-              Bapak I Gede Karang <br />
-              & Ibu Made Tuty Asrini, S.Sos
+              {{ fatherName }} <br />
+              & {{motherName}}
             </p>
           </div>
           <div class="namaInstagram flex flex-col justify-center animated">
             <a
-              href="https://www.instagram.com/riikatriana_"
+              :href="`https://www.instagram.com/${igName}`"
               type="button"
               target="_blank"
               rel="noopener"
               class="my-2 underline"
               ><i class="fa fa-instagram" aria-hidden="true"></i>
-              riikatriana_</a
-            >
+              {{ igName }}</a>
           </div>
         </div>
       </div>
