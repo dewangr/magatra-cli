@@ -1,5 +1,6 @@
 <script setup>
 import "@/assets/main.css";
+import { defineProps } from "vue";
 
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
@@ -14,6 +15,13 @@ import { ref } from "vue";
 const plugins = [lgThumbnail, lgZoom];
 
 const visibleCount = ref(6);
+
+defineProps({
+  bgPath: {
+    type: String,
+    default: "background/bg-groom.webp",
+  },
+});
 
 const allImages = [
   "/photos/galeri/DSC03305.webp",
@@ -46,7 +54,7 @@ const allImages = [
     ></div>
     <div class="relative h-screen">
       <img
-        src="../assets/photo/background/bg-galeri.webp"
+         :src="require(`../assets/photo/${bgPath}`)"
         class="object-cover absolute h-screen"
         alt="..."
       />
