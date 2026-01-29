@@ -120,7 +120,7 @@ const caPath = [
     >
       <div class="isiUndangan relative">
         <TopCarousel class="snap-start" :slides-path="caPath" :groom-name="'Dwi'" :bride-name="'Manik'"></TopCarousel>
-        <OmSwastyastu class="snap-start"></OmSwastyastu>
+        <OmSwastyastu class="snap-start" :bg-path="'bg-dwimanik/bg-osa.webp'"></OmSwastyastu>
         <GroomProfile :anak-ke="'kedua'" :ig-name="'dwiseptiawan_'" :groom-name="'Kadek Dwi Septiawan'" :father-name="'Made Dastra'" :mother-name="'Ni Made Ariani'" class="snap-start"></GroomProfile>
         <BrideProfile :anak-ke="'pertama'" :ig-name="'srimanik_'" :bride-name="'I Luh Sri Manik S.E'" :father-name="'Ketut Sumandra'" :mother-name="'Ida Ayu Putu Suwartini'" class="snap-start"></BrideProfile>
         <WaktuAcara :hari-acara="'Selasa'" :tgl-acara="'24/03/2026'" :waktu-mulai="'13:00'" :waktu-selesai="'22:00'" :alamat-acara="'Perumahan Kirana 1 (Depan SDN 1 Panji), Desa Panji, Buleleng'" :link-maps="'https://maps.app.goo.gl/n6t9aAXNBJ6KZNaQ8'" class="snap-start"></WaktuAcara>
