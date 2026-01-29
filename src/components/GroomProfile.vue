@@ -23,6 +23,10 @@ defineProps({
     type: String,
     default: "indraa_wn",
   },
+  bgPath: {
+    type: String,
+    default: "background/bg-groom.webp",
+  },
 });
 </script>
 <template>
@@ -32,7 +36,7 @@ defineProps({
     ></div>
     <div class="relative h-screen">
       <img
-        src="../assets/photo/background/bg-groom.webp"
+        :src="require(`../assets/photo/${bgPath}`)"
         class="object-cover absolute h-screen"
         alt="..."
       />
