@@ -68,6 +68,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   targetElements.forEach((element) => observer.observe(element));
 });
+
+const caPath = [
+  "/photos/dwimanik/carousel/ca1.webp",
+  "/photos/dwimanik/carousel/ca2.webp",
+  "/photos/dwimanik/carousel/ca3.webp",
+  "/photos/dwimanik/carousel/ca4.webp",
+];
 </script>
 
 <template>
@@ -112,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
       class="hidden absolute md:w-96 inset-y-0 right-0 snap-y snap-mandatory overflow-scroll"
     >
       <div class="isiUndangan relative">
-        <TopCarousel class="snap-start" :slides-path="[]" :groom-name="'Dwi'" :bride-name="'Manik'"></TopCarousel>
+        <TopCarousel class="snap-start" :slides-path="caPath" :groom-name="'Dwi'" :bride-name="'Manik'"></TopCarousel>
         <OmSwastyastu class="snap-start"></OmSwastyastu>
         <GroomProfile :anak-ke="'kedua'" :ig-name="'dwiseptiawan_'" :groom-name="'Kadek Dwi Septiawan'" :father-name="'Made Dastra'" :mother-name="'Ni Made Ariani'" class="snap-start"></GroomProfile>
         <BrideProfile :anak-ke="'pertama'" :ig-name="'srimanik_'" :bride-name="'I Luh Sri Manik S.E'" :father-name="'Ketut Sumandra'" :mother-name="'Ida Ayu Putu Suwartini'" class="snap-start"></BrideProfile>
@@ -158,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </template>
 <style scoped>
 .background-sampul {
-  background-image: url("../assets/photo/background/bg-sampul.webp");
+  background-image: url("../assets/photo/bg-dwimanik/bg-smpl.webp");
   background-size: cover;
   background-position: center;
 }
