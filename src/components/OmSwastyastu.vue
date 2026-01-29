@@ -10,7 +10,11 @@ defineProps({
   },
   textParagraf: {
     type: String,
-    required: false,
+    default: "Atas Asung Kerta Wara Nugraha Ida Sang Hyang Widhi Wasa, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir pada upacara Manusa Yadnya pawiwahan putra-putri kami.",
+  },
+  bgPath: {
+    type: String,
+    default: "background/bg-swastyastu.webp",
   },
 });
 </script>
@@ -22,7 +26,7 @@ defineProps({
     ></div>
     <div class="flex relative h-screen justify-end">
       <img
-        src="../assets/photo/background/bg-swastyastu.webp"
+        :src="require(`../assets/photo/${bgPath}`)"
         class="object-cover absolute h-screen"
         alt="..."
       />
@@ -33,12 +37,10 @@ defineProps({
           <p
             class="font-basic tracking-widest leading-10 uppercase text-2xl animated"
           >
-            Om Swastyastu
+            {{ textJudul }}
           </p>
           <p class="animated">
-            Atas Asung Kerta Wara Nugraha Ida Sang Hyang Widhi Wasa, kami
-            bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir pada upacara
-            Manusa Yadnya pawiwahan putra-putri kami.
+              {{ textParagraf }}
           </p>
         </div>
       </div>
