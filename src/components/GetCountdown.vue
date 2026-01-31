@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, ref, onMounted, onBeforeUnmount} from "vue";
 
 const props = defineProps({
   targetDate: {
@@ -13,61 +13,63 @@ const props = defineProps({
   },
 });
 
-// Set the date we're counting down to
-const countDownDate = props.targetDate.getTime();
-let days = 0;
-let hours = 0;
-let minutes = 0;
-let seconds = 0;
-// Update the count down every 1 second
-setInterval(function () {
-  const currentDate = new Date().getTime();
-  // Get today's date and time
+// reactive countdown values
+const days = ref(0);
+const hours = ref(0);
+const minutes = ref(0);
+const seconds = ref(0);
+let timerId = null;
 
-  // Find the distance between now and the count down date
-  const dateDistance = countDownDate - currentDate;
+function updateCountdown() {
+  const countDownDate = props.targetDate.getTime();
+  const now = new Date().getTime();
+  let dateDistance = countDownDate - now;
 
-  // Time calculations for days, hours, minutes and seconds
-  days = Math.floor(dateDistance / (1000 * 60 * 60 * 24));
-  hours = Math.floor((dateDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  minutes = Math.floor((dateDistance % (1000 * 60 * 60)) / (1000 * 60));
-  seconds = Math.floor((dateDistance % (1000 * 60)) / 1000);
-
-  if (days < 0) {
-    days = 0;
-    hours = 0;
-    minutes = 0;
-    seconds = 0;
+  if (dateDistance <= 0) {
+    days.value = 0;
+    hours.value = 0;
+    minutes.value = 0;
+    seconds.value = 0;
+    return;
   }
 
-  // Display the result in the element with id="demo"
-  document.getElementById("daysDigit").innerHTML = days;
-  document.getElementById("hoursDigit").innerHTML = hours;
-  document.getElementById("minutesDigit").innerHTML = minutes;
-  document.getElementById("secondsDigit").innerHTML = seconds;
-}, 1000);
+  days.value = Math.floor(dateDistance / (1000 * 60 * 60 * 24));
+  hours.value = Math.floor((dateDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  minutes.value = Math.floor((dateDistance % (1000 * 60 * 60)) / (1000 * 60));
+  seconds.value = Math.floor((dateDistance % (1000 * 60)) / 1000);
+}
 
-const textDays = days <= 2 ? "day" : "days";
-const textHours = hours <= 2 ? "hour" : "hours";
-const textMinutes = minutes <= 2 ? "minute" : "minutes";
-const textSeconds = seconds <= 2 ? "second" : "seconds";
+onMounted(() => {
+  updateCountdown();
+  timerId = setInterval(updateCountdown, 1000);
+});
+
+onBeforeUnmount(() => {
+  if (timerId) clearInterval(timerId);
+});
+
+// const textDays = computed(() => (days.value <= 2 ? "day" : "days"));
+// const textHours = computed(() => (hours.value <= 2 ? "hour" : "hours"));
+// const textMinutes = computed(() => (minutes.value <= 2 ? "minute" : "minutes"));
+// const textSeconds = computed(() => (seconds.value <= 2 ? "second" : "seconds"));
 </script>
+
 <template>
   <div class="countDays flex flex-col pr-2">
-    <h5 id="daysDigit" class="numberDigit"></h5>
-    <p>{{ textDays }}</p>
+    <h5 id="daysDigit" class="numberDigit">{{ days }}</h5>
+    <p>Hari</p>
   </div>
   <div class="countHours flex flex-col pr-2">
-    <h5 id="hoursDigit" class="numberDigit"></h5>
-    <p>{{ textHours }}</p>
+    <h5 id="hoursDigit" class="numberDigit">{{ hours }}</h5>
+    <p>Jam</p>
   </div>
   <div class="countMinutes flex flex-col pr-2">
-    <h5 id="minutesDigit" class="numberDigit"></h5>
-    <p>{{ textMinutes }}</p>
+    <h5 id="minutesDigit" class="numberDigit">{{ minutes }}</h5>
+    <p>Menit</p>
   </div>
   <div :hidden="props.hideSeconds" class="countSeconds flex flex-col">
-    <h5 id="secondsDigit" class="numberDigit"></h5>
-    <p>{{ textSeconds }}</p>
+    <h5 id="secondsDigit" class="numberDigit">{{ seconds }}</h5>
+    <p>Detik</p>
   </div>
 </template>
 <style scoped>
