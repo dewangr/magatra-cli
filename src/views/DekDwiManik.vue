@@ -69,12 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
   targetElements.forEach((element) => observer.observe(element));
 });
 
-const caPath = [
-  "/photos/dwimanik/carousel/ca1.webp",
-  "/photos/dwimanik/carousel/ca2.webp",
-  "/photos/dwimanik/carousel/ca3.webp",
-  "/photos/dwimanik/carousel/ca4.webp",
-];
 </script>
 
 <template>
@@ -87,7 +81,7 @@ const caPath = [
         <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
         <div class="background-sampul absolute inset-0 z-0"></div>
         <div
-          class="konten-sampul grid grid-rows-2 items-center justify-center h-full pb-40 z-20 relative"
+          class="konten-sampul grid grid-rows-2 items-center justify-center h-full py-7 z-20 relative"
         >
           <NamaPengantin :groom-name="'Dwi'" :bride-name="'Manik'" class="mb-40 mt-20 animated" />
           <div
@@ -119,15 +113,15 @@ const caPath = [
       class="hidden absolute md:w-96 inset-y-0 right-0 snap-y snap-mandatory overflow-scroll"
     >
       <div class="isiUndangan relative">
-        <TopCarousel class="snap-start" :slides-path="caPath" :groom-name="'Dwi'" :bride-name="'Manik'"></TopCarousel>
+        <TopCarousel class="snap-start" :folder-path="'dwimanik/carousel'" :groom-name="'Dwi'" :bride-name="'Manik'"></TopCarousel>
         <OsaTextBottom class="snap-start" :bg-path="'bg-dwimanik/bg-osa.webp'"></OsaTextBottom>
         <GroomProfile class="snap-start" :bg-path="'bg-dwimanik/bg-groom.webp'" :anak-ke="'kedua'" :ig-name="'dwiseptiawan_'" :groom-name="'Kadek Dwi Septiawan'" :father-name="'Made Dastra'" :mother-name="'Ni Made Ariani'"></GroomProfile>
         <BrideProfile class="snap-start" :bg-path="'bg-dwimanik/bg-bride.webp'" :anak-ke="'pertama'" :ig-name="'srimanik_'" :bride-name="'I Luh Sri Manik S.E'" :father-name="'Ketut Sumandra'" :mother-name="'Ida Ayu Putu Suwartini'"></BrideProfile>
-        <WaktuAcara class="snap-start" :hari-acara="'Selasa'" :tgl-acara="'24/03/2026'" :waktu-mulai="'13:00'" :waktu-selesai="'22:00'" :alamat-acara="'Perumahan Kirana 1 (Depan SDN 1 Panji), Desa Panji, Buleleng'" :link-maps="'https://maps.app.goo.gl/n6t9aAXNBJ6KZNaQ8'"></WaktuAcara>
-        <GaleriFoto class="snap-start"></GaleriFoto>
-        <FormReservasi class="snap-start"></FormReservasi>
-        <AmplopDigital class="snap-start"></AmplopDigital>
-        <MaturSuksma class="snap-start"></MaturSuksma>
+        <WaktuAcara class="snap-start" :bg-path="'bg-dwimanik/bg-date.webp'" :hari-acara="'Selasa'" :tgl-acara="'24/03/2026'" :waktu-mulai="'13:00'" :waktu-selesai="'22:00'" :alamat-acara="'Perumahan Kirana 1, Jln. Kibarak Panji (Depan SDN 1 Panji), Buleleng'" :link-maps="'https://maps.app.goo.gl/n6t9aAXNBJ6KZNaQ8'"></WaktuAcara>
+        <GaleriFoto class="snap-start" :bg-path="'bg-dwimanik/bg-foto.webp'" :folder-path="'dwimanik/galeri'" :total-images="20" ></GaleriFoto>
+        <FormReservasi class="snap-start" :bg-path="'bg-dwimanik/bg-rsvp.webp'"></FormReservasi>
+        <AmplopDigital class="snap-start" :bg-path="'bg-dwimanik/bg-amplop.webp'"></AmplopDigital>
+        <MaturSuksma class="snap-start" :bg-path="'bg-dwimanik/bg-suksma.webp'"></MaturSuksma>
         <audio
           loop
           class="hidden"
@@ -137,7 +131,7 @@ const caPath = [
           controls
         >
           <source
-            src="../assets/music/Raim Laode - Lesung Pipi.mp3"
+            src="../assets/music/Alex_Warren-Ordinary.mp3"
             type="audio/mp3"
           />
         </audio>
