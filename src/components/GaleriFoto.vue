@@ -16,35 +16,28 @@ const plugins = [lgThumbnail, lgZoom];
 
 const visibleCount = ref(6);
 
-defineProps({
+const props = defineProps({
   bgPath: {
     type: String,
     default: "background/bg-groom.webp",
   },
+  totalImages: {
+    type: Number,
+    default: 20,
+  },
+  folderPath: {
+    type: String,
+    default: "galeri",
+  },
 });
 
-const allImages = [
-  "/photos/galeri/DSC03305.webp",
-  "/photos/galeri/DSC03469.webp",
-  "/photos/galeri/DSC03519.webp",
-  "/photos/galeri/DSC03477.webp",
-  "/photos/galeri/DSC03448.webp",
-  "/photos/galeri/DSC03497.webp",
-  "/photos/galeri/DSC03399.webp",
-  "/photos/galeri/DSC03380.webp",
-  "/photos/galeri/DSC03421.webp",
-  "/photos/galeri/DSC03620.webp",
-  "/photos/galeri/DSC03092.webp",
-  "/photos/galeri/DSC03483.webp",
-  "/photos/galeri/DSC03174.webp",
-  "/photos/galeri/DSC03298.webp",
-  "/photos/galeri/DSC03342.webp",
-  "/photos/galeri/DSC03352.webp",
-  "/photos/galeri/DSC03526.webp",
-  "/photos/galeri/DSC03554.webp",
-  "/photos/galeri/DSC03506.webp",
-  "/photos/galeri/DSC03600.webp",
-];
+let allImages = [];
+let imagePath = `/photos/${props.folderPath}/img`;
+
+for (let i = 1; i <= props.totalImages; i++) {
+  allImages.push(`${imagePath} (${i}).webp`);
+}
+
 </script>
 
 <template>
