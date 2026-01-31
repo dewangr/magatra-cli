@@ -14,19 +14,22 @@ const props = defineProps({
     type: String,
     required: true,
   },
-  slidesPath: {
-    type: Array,
-    required: true,
-    default: () => [],
+  totalImages: {
+    type: Number,
+    default: 4,
+  },folderPath: {
+    type: String,
+    default: "carousel",
   },
 });
 
-const carouselSlides = props.slidesPath.length > 0 ? props.slidesPath : [
-  "/photos/carousel/carousel1.webp",
-  "/photos/carousel/carousel2.webp",
-  "/photos/carousel/carousel3.webp",
-  "/photos/carousel/carousel4.webp",
-];
+let carouselSlides = [];
+let imagePath = `/photos/${props.folderPath}/carousel`;
+
+for (let i = 1; i <= props.totalImages; i++) {
+  carouselSlides.push(`${imagePath} (${i}).webp`);
+}
+
 </script>
 <template>
   <div class="h-screen">
