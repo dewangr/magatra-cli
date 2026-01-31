@@ -70,9 +70,9 @@ let bgImage = require(`../assets/photo/${props.bgPath}`);
           </h2>
           <hr />
           <div class="hariTanggal my-2 animated">
-            <h4 class="bold text-xl">{{ hariAcara }}, {{ tanggalAcara }}</h4>
+            <h3 class="bold text-2xl">{{ hariAcara }}, {{ tanggalAcara }}</h3>
             <p>{{ waktuMulai }} - {{ waktuSelesai }}</p>
-            <div class="hitungMundur flex flex-row my-2 text-center">
+            <div class="hitungMundur flex flex-row mb-2 mt-4 text-center">
               <GetCountdown :targetDate="targetDateFormatted" :hideSeconds="false" />
             </div>
           </div>
