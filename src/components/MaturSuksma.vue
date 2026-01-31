@@ -1,5 +1,13 @@
 <script setup>
 import "@/assets/main.css";
+import { defineProps } from "vue";
+
+const props = defineProps({
+  bgPath: {
+    type: String,
+    default: "background/bg-suksma.webp",
+  },
+});
 </script>
 <template>
   <div class="relative w-full flex flex-col">
@@ -8,7 +16,7 @@ import "@/assets/main.css";
     ></div>
     <div class="relative h-screen">
       <img
-        src="../assets/photo/background/bg-suksma.webp"
+         :src="require(`../assets/photo/${props.bgPath}`)"
         class="object-cover absolute h-screen"
         alt="..."
       />

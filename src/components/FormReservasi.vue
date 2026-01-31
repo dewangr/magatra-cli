@@ -3,11 +3,18 @@
 import "@/assets/main.css";
 import CardUcapan from "./cardUcapan.vue";
 import axios from "axios";
-import { onMounted, ref } from "vue";
+import { onMounted, ref, defineProps } from "vue";
 
-const apiURL = 'https://api.magatra.top'
+const apiURL = 'https://api.magatra.site'
 
 const rspvData = ref([]);
+
+const props = defineProps({
+  bgPath: {
+    type: String,
+    default: "background/bg-reservasi.webp",
+  }
+});
 
 async function getRsvpData() {
   try {
@@ -32,6 +39,7 @@ setInterval(async () => {
 
 const namaTamu = ref("");
 const ucapan = ref("");
+
 
 async function addItem() {
   try {
@@ -58,7 +66,7 @@ async function addItem() {
     ></div>
     <div class="relative h-screen">
       <img
-        src="../assets/photo/background/bg-rsvp.webp"
+         :src="require(`../assets/photo/${props.bgPath}`)"
         class="object-cover absolute h-screen"
         alt="..."
       />
