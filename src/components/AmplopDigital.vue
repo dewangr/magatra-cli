@@ -1,5 +1,14 @@
 <script setup>
 import BankDetails from "./BankDetails.vue";
+import "@/assets/main.css";
+import { defineProps } from "vue";
+
+const props = defineProps({
+  bgPath: {
+    type: String,
+    default: "background/bg-reservasi.webp",
+  },
+});
 </script>
 <template>
   <div class="relative w-full flex flex-col">
@@ -8,7 +17,7 @@ import BankDetails from "./BankDetails.vue";
     ></div>
     <div class="relative h-screen">
       <img
-        src="../assets/photo/background/bg-amplop.webp"
+         :src="require(`../assets/photo/${props.bgPath}`)"
         class="object-cover absolute h-screen"
         alt="..."
       />
@@ -29,28 +38,16 @@ import BankDetails from "./BankDetails.vue";
         </div>
         <div class="tujuanTransfer animated">
           <BankDetails
-            bankName="BNI"
-            bankNumber="0889031640"
-            holderName="I Made Diana Indrawan"
-            buttonId="salinBNI"
-          />
-          <BankDetails
-            bankName="BPD"
-            bankNumber="0160202168282"
-            holderName="I Made Diana Indrawan"
-            buttonId="salinBPD"
-          />
-          <BankDetails
             bankName="BRI"
-            bankNumber="036801052188503"
-            holderName="Luh Rika Triana Savitri"
+            bankNumber="0088 0104 5019 503"
+            holderName="Kadek Dwi Septiawan"
             buttonId="salinBRI"
           />
           <BankDetails
-            bankName="BCA"
-            bankNumber="2360784196"
-            holderName="Luh Rika Triana Savitri"
-            buttonId="salinBCA"
+            bankName="BPD"
+            bankNumber="0140202809995"
+            holderName="I Luh Sri Manik"
+            buttonId="salinBPD"
           />
         </div>
       </div>
