@@ -12,7 +12,7 @@ import WaktuAcara from "@/components/WaktuAcara.vue";
 import BrideProfile from "@/components/BrideProfile.vue";
 import GroomProfile from "@/components/GroomProfile.vue";
 import AmplopDigital from "@/components/AmplopDigital.vue";
-import OsaTextBottom from "@/components/OsaTextBottom.vue";
+import OmSwastyastu from "@/components/OmSwastyastu.vue";
 
 const route = useRoute();
 const invitedPerson = ref(route.query.to || "nama tamu");
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
         <div class="background-sampul absolute inset-0 z-0"></div>
         <div
-          class="konten-sampul grid grid-rows-2 items-center justify-center h-full py-7 z-20 relative"
+          class="konten-sampul grid grid-rows-2 items-center justify-center h-full py-5 z-20 relative"
         >
           <NamaPengantin :groom-name="'Dwi'" :bride-name="'Manik'" class="mb-40 mt-20 animated" />
           <div
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
     >
       <div class="isiUndangan relative">
         <TopCarousel class="snap-start" :folder-path="'dwimanik/carousel'" :groom-name="'Dwi'" :bride-name="'Manik'"></TopCarousel>
-        <OsaTextBottom class="snap-start" :bg-path="'bg-dwimanik/bg-osa.webp'"></OsaTextBottom>
+        <OmSwastyastu class="snap-start" :bg-path="'bg-dwimanik/bg-osa.webp'"></OmSwastyastu>
         <GroomProfile class="snap-start" :bg-path="'bg-dwimanik/bg-groom.webp'" :anak-ke="'kedua'" :ig-name="'dwiseptiawan_'" :groom-name="'Kadek Dwi Septiawan'" :father-name="'Made Dastra'" :mother-name="'Ni Made Ariani'"></GroomProfile>
         <BrideProfile class="snap-start" :bg-path="'bg-dwimanik/bg-bride.webp'" :anak-ke="'pertama'" :ig-name="'srimanik_'" :bride-name="'I Luh Sri Manik S.E'" :father-name="'Ketut Sumandra'" :mother-name="'Ida Ayu Putu Suwartini'"></BrideProfile>
         <WaktuAcara class="snap-start" :bg-path="'bg-dwimanik/bg-date.webp'" :hari-acara="'Selasa'" :tgl-acara="'24/03/2026'" :waktu-mulai="'13:00'" :waktu-selesai="'22:00'" :alamat-acara="'Perumahan Kirana 1, Jln. Kibarak Panji (Depan SDN 1 Panji), Buleleng'" :link-maps="'https://maps.app.goo.gl/n6t9aAXNBJ6KZNaQ8'"></WaktuAcara>
