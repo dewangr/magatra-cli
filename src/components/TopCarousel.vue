@@ -54,10 +54,12 @@ for (let i = 1; i <= props.totalImages; i++) {
           </CarouselMain>
         </div>
       </div>
-      <div class="main-content z-10 mb-20">
-        <NamaPengantin :groom-name="props.groomName" :bride-name="props.brideName" />
+      <div class="main-content absolute inset-0 z-10 flex flex-col justify-between items-center py-10">
+        <div class="w-full flex justify-center mt-8">
+          <NamaPengantin :groom-name="props.groomName" :bride-name="props.brideName" />
+        </div>
         <div
-          class="ayatWeda flex flex-col mx-5 text-center animated text-off-white"
+          class="ayatWeda flex flex-col mx-5 text-center animated text-off-white space-y-4 leading-relaxed"
         >
           <p>
             “Wahai pasangan suami-istri, semoga kalian tetap bersatu dan tidak
