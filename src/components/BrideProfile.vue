@@ -51,8 +51,8 @@ defineProps({
           <div class="animated">
             <p>Putri {{ anakKe }} dari</p>
             <p>
-              {{ fatherName }} <br />
-              & {{motherName}}
+              Bapak {{ fatherName }} <br />
+              & Ibu {{motherName}}
             </p>
           </div>
           <div class="namaInstagram flex flex-col justify-center animated">
