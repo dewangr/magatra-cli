@@ -62,7 +62,7 @@ let bgImage = require(`../assets/photo/${props.bgPath}`);
       <div
         class="main-content relative z-20 flex flex-col justify-center text-start h-screen mx-7"
       >
-        <div class="waktuPelaksanaan">
+        <div class="waktuPelaksanaan text-off-white">
           <h2
             class="uppercase font-basic my-2 tracking-[0.3rem] text-2xl animated"
           >
@@ -90,6 +90,7 @@ let bgImage = require(`../assets/photo/${props.bgPath}`);
             rel="noopener"
             >Google Maps</a
           >
+          <iframe class="max-w-80 h-60" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.5657590095348!2d115.08634149999999!3d-8.145610399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd19a9b3ea240df%3A0xe3789632e8bad876!2sPerumahan%20Kirana%201%20Desa%20Panji!5e0!3m2!1sen!2sid!4v1769923634706!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
