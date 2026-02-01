@@ -60,9 +60,9 @@ let bgImage = require(`../assets/photo/${props.bgPath}`);
         alt="..."
       />
       <div
-        class="main-content relative z-20 flex flex-col justify-center text-start h-screen mx-7"
+        class="main-content relative z-20 text-off-white flex flex-col justify-center text-start h-screen mx-7"
       >
-        <div class="waktuPelaksanaan text-off-white">
+        <div class="waktuPelaksanaan">
           <h2
             class="uppercase font-basic my-2 tracking-[0.3rem] text-2xl animated"
           >
