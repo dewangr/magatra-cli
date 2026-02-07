@@ -1,18 +1,18 @@
 <script setup>
 import "@/assets/main.css";
+import { useRoute } from "vue-router";
+import { ref } from "vue";
 
 import TopCarousel from "../components/TopCarousel.vue";
 import GaleriFoto from "../components/GaleriFoto.vue";
 import NamaPengantin from "../components/NamaPengantin.vue";
 import MaturSuksma from "../components/MaturSuksma.vue";
-import FormReservasi from "../components/FormReservasi.vue";
-import { useRoute } from "vue-router";
-import { ref } from "vue";
 import WaktuAcara from "@/components/WaktuAcara.vue";
 import BrideProfile from "@/components/BrideProfile.vue";
 import GroomProfile from "@/components/GroomProfile.vue";
 import AmplopDigital from "@/components/AmplopDigital.vue";
 import OmSwastyastu from "@/components/OmSwastyastu.vue";
+import RsvpWithKehadiran from "@/components/rsvpLayouts/rsvpWithKehadiran.vue";
 
 const route = useRoute();
 const invitedPerson = ref(route.query.to || "nama tamu");
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <BrideProfile class="snap-start" :bg-path="'bg-dwimanik/bg-bride.webp'" :anak-ke="'pertama'" :ig-name="'srimanik_'" :bride-name="'I Luh Sri Manik S.E'" :father-name="'Ketut Sumandra'" :mother-name="'Ida Ayu Putu Suwartini'"></BrideProfile>
         <WaktuAcara class="snap-start" :bg-path="'bg-dwimanik/bg-date.webp'" :hari-acara="'Selasa'" :tgl-acara="'24/03/2026'" :waktu-mulai="'13:00'" :waktu-selesai="'22:00'" :alamat-acara="'Perumahan Kirana 1, Jln. Kibarak Panji (Depan SDN 1 Panji), Buleleng'" :link-maps="'https://maps.app.goo.gl/n6t9aAXNBJ6KZNaQ8'"></WaktuAcara>
         <GaleriFoto class="snap-start" :bg-path="'bg-dwimanik/bg-foto.webp'" :folder-path="'dwimanik/galeri'" :total-images="20" ></GaleriFoto>
-        <FormReservasi class="snap-start" :bg-path="'bg-dwimanik/bg-rsvp.webp'"></FormReservasi>
+        <RsvpWithKehadiran class="snap-start" :bg-path="'bg-dwimanik/bg-rsvp.webp'"></RsvpWithKehadiran>
         <AmplopDigital class="snap-start" :bg-path="'bg-dwimanik/bg-amplop.webp'"></AmplopDigital>
         <MaturSuksma class="snap-start" :bg-path="'bg-dwimanik/bg-suksma.webp'"></MaturSuksma>
         <audio
