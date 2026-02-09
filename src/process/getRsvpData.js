@@ -6,7 +6,7 @@ export async function getRsvpData() {
   const rspvData = ref([]);
 
   try {
-    const response = await axios.get(`${API_URL}/api/rsvps`);
+    const response = await axios.get(`${API_URL}/rsvps`);
     rspvData.value = response.data.data;
     return rspvData;
   } catch (error) {

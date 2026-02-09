@@ -5,7 +5,7 @@ import { getRsvpData } from "./getRsvpData.js";
 export async function addItem(namaTamu, ucapan, akanHadir) {
   try {
     const response = await axios.post(
-      `${API_URL}/api/rsvps`,
+      `${API_URL}/rsvps`,
       {
         nama_tamu: namaTamu.value,
         ucapan: ucapan.value,

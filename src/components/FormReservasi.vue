@@ -5,8 +5,6 @@ import CardUcapan from "./cardUcapan.vue";
 import axios from "axios";
 import { onMounted, ref, defineProps } from "vue";
 
-const apiURL = 'https://api.magatra.site'
-
 const rspvData = ref([]);
 
 const props = defineProps({
@@ -19,7 +17,7 @@ const props = defineProps({
 async function getRsvpData() {
   try {
     const response = await axios.get(
-      `${apiURL}/api/rsvps`
+      `${process.env.API_URL}/rsvps`
     );
     rspvData.value = response.data.data;
     return;
@@ -44,7 +42,7 @@ const ucapan = ref("");
 async function addItem() {
   try {
     const response = await axios.post(
-      `${apiURL}/api/rsvps`,
+      `${apiURL}/rsvps`,
       {
         nama_tamu: namaTamu.value,
         ucapan: ucapan.value,

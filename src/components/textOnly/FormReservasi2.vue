@@ -12,15 +12,12 @@ const props = defineProps({
     },
 });
 
-
-const apiURL = 'https://api.magatra.top'
-
 const rspvData = ref([]);
 
 async function getRsvpData() {
     try {
         const response = await axios.get(
-            `${apiURL}/api/rsvps`
+            `${process.env.API_URL}/rsvps`
         );
         rspvData.value = response.data.data;
         return;
@@ -44,7 +41,7 @@ const ucapan = ref("");
 async function addItem() {
     try {
         const response = await axios.post(
-            `${apiURL}/api/rsvps`,
+            `${apiURL}/rsvps`,
             {
                 nama_tamu: namaTamu.value,
                 ucapan: ucapan.value,
