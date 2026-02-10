@@ -3,9 +3,11 @@ import { API_URL } from "../types/consts.js";
 import { getRsvpData } from "./getRsvpData.js";
 
 export async function addItem(namaTamu, ucapan, akanHadir) {
+const endpoint = `${API_URL}/rsvps`;
+
   try {
     const response = await axios.post(
-      `${API_URL}/rsvps`,
+      endpoint,
       {
         nama_tamu: namaTamu.value,
         ucapan: ucapan.value,
