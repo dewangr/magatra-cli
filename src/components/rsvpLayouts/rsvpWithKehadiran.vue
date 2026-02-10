@@ -1,4 +1,3 @@
-
 <script setup>
 import "@/assets/main.css";
 import { onMounted, defineProps } from "vue";
@@ -6,8 +5,9 @@ import { getRsvpData } from "@/process/getRsvpData";
 import TextJudul from "../textOnly/textJudul.vue";
 import KehadiranText from "../bubbles/kehadiranText.vue";
 import FormDgKehadiran from "../forms/formDgKehadiran.vue";
+import { ref } from "vue";
 
-const rspvData = getRsvpData();
+const rspvData = ref([]);
 
 const props = defineProps({
   bgPath: {
@@ -17,7 +17,9 @@ const props = defineProps({
 });
 
 onMounted(() => {
-  getRsvpData();
+  getRsvpData().then((data) => {
+    rspvData.value = data.value;
+  });
 });
 
 setInterval(async () => {
@@ -41,7 +43,7 @@ setInterval(async () => {
         class="main-content relative z-20 flex flex-col justify-center h-screen mx-7"
       >
         <div class="formReservasi flex flex-col">
-          <TextJudul :title="'RESERVASI'" :description="'Silakan isi form untuk mengirimkan ucapan dan doa untuk kedua mempelai'"></TextJudul>
+          <TextJudul :title="'RESERVASI'" :description="'Kirimkan ucapan dan doa untuk kedua mempelai'"></TextJudul>
           <FormDgKehadiran />
           <div
             class="hasilReservasi mt-7 flex flex-col max-h-56 lg:max-h-48 overflow-y-scroll animated"
@@ -51,8 +53,8 @@ setInterval(async () => {
               :key="id"
               :namaTamu="data.nama_tamu"
               :ucapan="data.ucapan"
-              :timestampKomentar="data.timestampKomentar"
-              :konfirmasiKehadiran="data.konfirmasi_kehadiran"
+              :timestampKomentar="data.created_at"
+              :konfirmasiKehadiran="data.kehadiran"
             />
           </div>
         </div>
