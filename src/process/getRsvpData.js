@@ -9,10 +9,7 @@ export async function getRsvpData() {
 
   try {
     const response = await axios.get(endpoint);
-    console.log("RSVP data fetched:", response.data);
     rspvData.value = response.data.data;
-    console.log("RSVP data assigned to rspvData:", rspvData.value);
-
     return rspvData;
   } catch (error) {
     console.error("There has been a problem with your fetch operation:", error);
