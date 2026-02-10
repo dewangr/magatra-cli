@@ -16,12 +16,12 @@ const props = defineProps({
     required: true,
   },
   konfirmasiKehadiran: {
-    type: Number,
+    type: String,
     required: false,
   },
 });
 
-const hadirString = props.konfirmasiKehadiran === 1 ? "Akan hadir" : props.konfirmasiKehadiran === 0 ? "Maaf, tidak bisa hadir" : "Masih ragu";
+const hadirString = props.konfirmasiKehadiran === '1' ? "Akan hadir" : props.konfirmasiKehadiran === '0' ? "Maaf, tidak hadir" : "Masih ragu";
 
 const waktuKomentar = ref("");
 let intervalId;
