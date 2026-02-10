@@ -5,7 +5,6 @@ import { API_URL } from "../types/consts.js";
 export async function getRsvpData() {
   const rspvData = ref([]);
   const endpoint = `${API_URL}/rsvps`;
-  console.log("Fetching RSVP data from:", endpoint);
 
   try {
     const response = await axios.get(endpoint);
