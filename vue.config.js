@@ -13,6 +13,7 @@ module.exports = defineConfig({
       new PrerenderSPAPlugin({
         staticDir: path.join(__dirname, "dist"),
         routes: ["/", "/dekdwi-manik/"],
+        renderAfterDocumentEvent: 'render-event'
       }),
     ],
   },

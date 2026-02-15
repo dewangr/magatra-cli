@@ -10,3 +10,5 @@ const app = createApp(App);
 app.use(createHead());
 
 app.use(router).mount("#app");
+
+document.dispatchEvent(new Event('render-event'));

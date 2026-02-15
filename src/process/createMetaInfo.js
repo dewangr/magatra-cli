@@ -1,12 +1,14 @@
+import { siteUrl } from "@/types/consts";
 import { useHead } from "@unhead/vue";
 
 export function createMetaInfo({title, description, imagePath}) {
-const imageUrl = new URL(`../public/photos/metaInfo/${imagePath}`, import.meta.url).href;
+const imageUrl = new URL(`${siteUrl}/public/photos/metaInfo/${imagePath}`, import.meta.url).href;
   useHead({
     title: title,
     meta: [
       { property: "og:title", content: title },
       { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
       { property: "og:image", content: imageUrl },
       { name: "twitter:card", content: "summary_large_image" }
     ]
