@@ -1,7 +1,7 @@
 import { useHead } from "@unhead/vue";
 
 export function createMetaInfo({title, description, imagePath}) {
-const imageUrl = new URL(`../assets/photo/${imagePath}`, import.meta.url).href;
+const imageUrl = new URL(`../public/photos/metaInfo/${imagePath}`, import.meta.url).href;
   useHead({
     title: title,
     meta: [

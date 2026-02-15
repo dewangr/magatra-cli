@@ -18,7 +18,7 @@ import { createMetaInfo } from "@/process/createMetaInfo";
   createMetaInfo({
   title: "Undangan Pawiwahan Dwi & Manik",
   description: "Resepsi: 24 Maret 2026 di Perumahan Kirana 1, Ds. Panji, Buleleng",
-  imagePath: "bg-dwimanik/bg-smpl.webp"
+  imagePath: "dwimanik.jpg"
 })
 
 const route = useRoute();
