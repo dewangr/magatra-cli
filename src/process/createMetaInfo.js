@@ -12,5 +12,7 @@ const imageUrl = new URL(`${siteUrl}/public/photos/metaInfo/${imagePath}`, impor
       { property: "og:image", content: imageUrl },
       { name: "twitter:card", content: "summary_large_image" }
     ]
+  },{ 
+    tagPriority: 'critical' 
   });
 }
