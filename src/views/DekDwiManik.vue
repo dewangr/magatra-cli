@@ -1,7 +1,7 @@
 <script setup>
 import "@/assets/main.css";
 import { useRoute } from "vue-router";
-import { ref } from "vue";
+import { ref } from "vue"
 
 import TopCarousel from "../components/TopCarousel.vue";
 import GaleriFoto from "../components/GaleriFoto.vue";
@@ -13,6 +13,13 @@ import GroomProfile from "@/components/GroomProfile.vue";
 import AmplopDigital from "@/components/AmplopDigital.vue";
 import OmSwastyastu from "@/components/OmSwastyastu.vue";
 import RsvpWithKehadiran from "@/components/rsvpLayouts/rsvpWithKehadiran.vue";
+import { createMetaInfo } from "@/process/createMetaInfo";
+
+  createMetaInfo({
+  title: "Undangan Pawiwahan Dwi & Manik",
+  description: "Resepsi: 24 Maret 2026 di Perumahan Kirana 1, Ds. Panji, Buleleng",
+  imagePath: "bg-dwimanik/bg-smpl.webp"
+})
 
 const route = useRoute();
 const invitedPerson = ref(route.query.to || "nama tamu");
@@ -68,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   targetElements.forEach((element) => observer.observe(element));
 });
+
 
 </script>
 
