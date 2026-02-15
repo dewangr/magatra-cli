@@ -8,7 +8,7 @@ import "@/assets/main.css";
         <h5 class="font-rougeScript text-4xl">Magatra</h5>
         <p class="my-1 text-alt-dark">Digital Invitation © 2025</p>
         <div class="mediaSosial flex flex-row justify-center">
-          <a href="https://wa.me/+6283114104070"><i class="text-alt-dark fa fa-whatsapp mx-2" target="_blank"
+          <a href="https://wa.me/+6285161615628"><i class="text-alt-dark fa fa-whatsapp mx-2" target="_blank"
               rel="noopener" aria-hidden="true"></i></a>
         </div>
       </div>

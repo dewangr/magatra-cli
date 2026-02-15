@@ -45,7 +45,7 @@ const props = defineProps({
           <h5 class="font-rougeScript text-4xl">Magatra</h5>
           <p class="my-1">Digital Invitation © 2025</p>
           <div class="mediaSosial flex flex-row justify-center">
-            <a href="https://wa.me/+6283114104070"
+            <a href="https://wa.me/+6285161615628"
               ><i
                 class="fa fa-whatsapp mx-2"
                 target="_blank"
