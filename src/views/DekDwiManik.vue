@@ -2,6 +2,8 @@
 import "@/assets/main.css";
 import { useRoute } from "vue-router";
 import { ref } from "vue"
+import { useHead } from "@unhead/vue";
+import { siteUrl } from "@/types/consts";
 
 import TopCarousel from "../components/TopCarousel.vue";
 import GaleriFoto from "../components/GaleriFoto.vue";
@@ -13,13 +15,18 @@ import GroomProfile from "@/components/GroomProfile.vue";
 import AmplopDigital from "@/components/AmplopDigital.vue";
 import OmSwastyastu from "@/components/OmSwastyastu.vue";
 import RsvpWithKehadiran from "@/components/rsvpLayouts/rsvpWithKehadiran.vue";
-import { createMetaInfo } from "@/process/createMetaInfo";
 
-  createMetaInfo({
-  title: "Undangan Pawiwahan Dwi & Manik",
-  description: "Resepsi: 24 Maret 2026 di Perumahan Kirana 1, Ds. Panji, Buleleng",
-  imagePath: "dwimanik.jpg"
-})
+const imageUrl = new URL(`${siteUrl}/public/photos/metaInfo/dwimanik.jpg`, import.meta.url).href;
+  useHead({
+    title: "Undangan Pawiwahan Dwi & Manik",
+    meta: [
+      { property: "og:title", content: "Undangan Pawiwahan Dwi & Manik", key: "og:title" },
+      { property: "og:description", content: "Resepsi: 24 Maret 2026 di Perumahan Kirana 1, Ds. Panji, Buleleng", key: "og:description" },
+      { property: "og:image", content: imageUrl, key: "og:image" }
+    ]
+  },{ 
+    tagPriority: 'critical' 
+  });
 
 const route = useRoute();
 const invitedPerson = ref(route.query.to || "nama tamu");
@@ -76,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
   targetElements.forEach((element) => observer.observe(element));
 });
 
-
+document.dispatchEvent(new Event('render-event'));
 </script>
 
 <template>

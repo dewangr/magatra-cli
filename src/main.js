@@ -1,6 +1,6 @@
 import "./assets/main.css";
 
-import { createApp } from "vue";
+import { createApp, nextTick } from "vue";
 import { createHead } from "@unhead/vue/client";
 import App from "./App.vue";
 import router from "./router";
@@ -11,4 +11,6 @@ app.use(createHead());
 
 app.use(router).mount("#app");
 
-document.dispatchEvent(new Event('render-event'));
+nextTick(() => {
+  document.dispatchEvent(new Event('render-event'));
+});

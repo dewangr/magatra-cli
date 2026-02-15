@@ -4,7 +4,7 @@ const PrerenderSPAPlugin = require("prerender-spa-plugin-next");
 
 
 module.exports = defineConfig({
-  transpileDependencies: true,
+   parallel: false, 
   configureWebpack: {
     plugins: [
       new (require("webpack").DefinePlugin)({
@@ -13,7 +13,10 @@ module.exports = defineConfig({
       new PrerenderSPAPlugin({
         staticDir: path.join(__dirname, "dist"),
         routes: ["/", "/dekdwi-manik/"],
-        renderAfterDocumentEvent: 'render-event'
+        renderAfterDocumentEvent: 'render-event',
+         customRendererConfig: {
+          args: ['--no-sandbox', '--disable-setuid-sandbox']
+        },
       }),
     ],
   },

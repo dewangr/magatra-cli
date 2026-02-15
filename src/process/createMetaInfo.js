@@ -6,11 +6,9 @@ const imageUrl = new URL(`${siteUrl}/public/photos/metaInfo/${imagePath}`, impor
   useHead({
     title: title,
     meta: [
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: imageUrl },
-      { name: "twitter:card", content: "summary_large_image" }
+      { property: "og:title", content: title, key: "og:title" },
+      { property: "og:description", content: description, key: "og:description" },
+      { property: "og:image", content: imageUrl, key: "og:image" }
     ]
   },{ 
     tagPriority: 'critical' 
