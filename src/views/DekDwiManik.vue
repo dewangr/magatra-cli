@@ -16,7 +16,7 @@ import AmplopDigital from "@/components/AmplopDigital.vue";
 import OmSwastyastu from "@/components/OmSwastyastu.vue";
 import RsvpWithKehadiran from "@/components/rsvpLayouts/rsvpWithKehadiran.vue";
 
-const imageUrl = new URL(`${siteUrl}/public/photos/metaInfo/dwimanik.jpg`, import.meta.url).href;
+const imageUrl = new URL(`${siteUrl}public/photos/metaInfo/dwimanik.jpg`, import.meta.url).href;
   useHead({
     title: "Undangan Pawiwahan Dwi & Manik",
     meta: [

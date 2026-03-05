@@ -4,7 +4,8 @@ const PrerenderSPAPlugin = require("prerender-spa-plugin-next");
 
 
 module.exports = defineConfig({
-   parallel: false, 
+  parallel: false, 
+  transpileDependencies: true,
   configureWebpack: {
     plugins: [
       new (require("webpack").DefinePlugin)({
