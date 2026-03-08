@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Wedding1Views from "../views/Wedding1Views.vue";
 import TextOnlyViews1 from "../views/TextOnlyViews1.vue";
 import NotFoundView from "@/views/NotFoundView.vue";
+import UnderConstructionView from "@/views/UnderConstructionView.vue";
 import OtonanTelubulanan from "@/views/OtonanTelubulanan.vue";
 import DekDwiManik from "@/views/DekDwiManik.vue";
 
@@ -23,6 +24,7 @@ const routes = [
     component: DekDwiManik,
     props: true,
   },
+
   {
     path: "/telubulanan/anakdika",
     name: "OtonanTelubulanan",
@@ -34,12 +36,16 @@ const routes = [
     name: "NotFoundView",
     component: NotFoundView,
   },
-
   {
-    path: "/",
-    redirect: "/dekdwi-manik/",
+    path: "/construction",
+    name: "UnderConstructionView",
+    component: UnderConstructionView,
   },
   {
+    path: "/",
+    redirect: "/construction",
+  },
+  {  
     path: "/:catchAll(.*)",
     redirect: "/",
   },
