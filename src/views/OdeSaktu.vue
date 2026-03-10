@@ -6,10 +6,10 @@ import { ref } from "vue";
 import MagatraCopyright from "@/components/textOnly/MagatraCopyright.vue";
 import NamaPengantinDynalight from "@/components/namaPengantin/NamaPengantinDynalight.vue";
 import OmSwastyastuText from "@/components/textOnly/OmSwastyastuText.vue";
-import NamaMempelai from "@/components/namaPengantin/NamaMempelai.vue";
 import AcaraResepsi from "@/components/textOnly/AcaraResepsi.vue";
 import FormReservasi2 from "@/components/textOnly/FormReservasi2.vue";
 import BlurredName from "@/components/carousels/BlurredName.vue";
+import BlackNamaMempelai from "@/components/namaPengantin/BlackNamaMempelai.vue";
 
 // const ownerSlug = "ode-saktu";
 
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h3 class="nama-tamu drop-shadow-2xl capitalize mb-5 animated">
               {{ invitedPerson }}
             </h3>
-            <button type="button" class="btn-buka-undangan animated text-alt-dark" id="btn-buka"
+            <button type="button" class="btn-buka-undangan z-30 animated text-alt-dark" id="btn-buka"
               @click="clickBukaUndangan()">
               <i class="fa-solid fa-envelope-open"></i>&nbsp; Buka Undangan
             </button>
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="isiUndangan relative">
         <BlurredName :bride-name="'Saktu'" :groom-name="'Ode'" :total-images="4" :folder-path="'odesaktu/carousel'"></BlurredName>
         <OmSwastyastuText></OmSwastyastuText>
-        <NamaMempelai> </NamaMempelai>
+        <BlackNamaMempelai :folder-path="'odesaktu'" :urutPutra="1" :urutPutri="5"></BlackNamaMempelai>
         <AcaraResepsi></AcaraResepsi>
         <FormReservasi2> </FormReservasi2>
         <MagatraCopyright class="bg-black"></MagatraCopyright>
