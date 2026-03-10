@@ -26,7 +26,6 @@ const props = defineProps({
 
 let carouselSlides = [];
 let imagePath = `/photos/${props.folderPath}/carousel`;
-console.log("Image Path:", imagePath);
 
 for (let i = 1; i <= props.totalImages; i++) {
   carouselSlides.push(`${imagePath} (${i}).webp`);
