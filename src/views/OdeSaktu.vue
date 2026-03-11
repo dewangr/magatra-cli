@@ -10,6 +10,7 @@ import FormReservasi2 from "@/components/textOnly/FormReservasi2.vue";
 import BlurredName from "@/components/carousels/BlurredName.vue";
 import BlackNamaMempelai from "@/components/namaPengantin/BlackNamaMempelai.vue";
 import PawiwahanResepsi from "@/components/datetime/PawiwahanResepsi.vue";
+import GalerryRandomLayout from "@/components/layoutGaleri/GalleryRandomLayout.vue";
 
 // const ownerSlug = "ode-saktu";
 
@@ -102,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <OmSwastyastuText></OmSwastyastuText>
         <BlackNamaMempelai :folder-path="'odesaktu'" :urutPutra="1" :urutPutri="1"></BlackNamaMempelai>
         <PawiwahanResepsi :bg-path="'bg-odesaktu/bg-acara.webp'" :pwh-date="'23/03/2026'" :pwh-time-range="'09:00 - Selesai'" :rsp-date="'24/03/2026'" :rsp-time-range="'13:00 - 22:00 WITA'" :venue-address="'Jl. Pulau Obi Gang Juwet No. 12, Banyuning, Buleleng'" :maps-link="'https://maps.app.goo.gl/whcS9KNMvNWcbAqu8'"></PawiwahanResepsi>
+        <GalerryRandomLayout :bg-path="'bg-odesaktu/bg-galeri.webp'" :total-images="14" :folder-path="'odesaktu/galeri'"></GalerryRandomLayout>
         <FormReservasi2> </FormReservasi2>
         <MagatraCopyright class="bg-black"></MagatraCopyright>
         <audio loop class="hidden" preload="none" id="bgm" controlsList="nodownload" controls>
