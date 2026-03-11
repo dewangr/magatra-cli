@@ -21,22 +21,19 @@ const props = defineProps({
 const anakPutra = props.urutPutra === 1 ? "pertama" : props.urutPutra === 2 ? "kedua" : props.urutPutra === 3 ? "ketiga" : `ke-${props.urutPutra}`;
 const anakPutri = props.urutPutri === 1 ? "pertama" : props.urutPutri === 2 ? "kedua" : props.urutPutri === 3 ? "ketiga" : `ke-${props.urutPutri}`;
 
-// let imagePath = `../../assets/photo/bg-${props.folderPath}`;
-// let groomImage = `${imagePath}/bg-groom.webp`;
-// let brideImage = `${imagePath}/bg-bride.webp`;
-// console.log("Image Path: ", imagePath);
-// console.log("Groom Image: ", groomImage);
-// console.log("Bride Image: ", brideImage);
+const bgGroom = require(`../../assets/photo/bg-${props.folderPath}/bg-groom.webp`);
+const bgBride = require(`../../assets/photo/bg-${props.folderPath}/bg-bride.webp`);
 
 </script>
+
 <template>
     <div class="flex h-fit justify-center bg-black py-3 pb-20">
         <div class="main-content flex flex-col justify-center text-center">
             <div class="text-off-white">
                 <div
                     class="infoPengantin py-8 px-1 flex flex-col items-center justify-center gap-5 w-full h-full">
-                    <div class="profileGroom flex flex-col items-center w-[80%]">
-                        <div class="ïmageGroom mb-4">
+                    <div class="profileGroom ">
+                        <div class="imageGroom animated">
                             <div class="relative ">
                                 <div
                                 class="absolute top-[10%] -right-10 w-32 h-[80%] rounded-full
@@ -45,7 +42,7 @@ const anakPutri = props.urutPutri === 1 ? "pertama" : props.urutPutri === 2 ? "k
 
                                 <div class="w-full h-full rounded-full overflow-hidden relative z-10 border-2 border-off-white/70">
                                 <img
-                                    src="../../assets/photo/bg-odesaktu/bg-groom.webp"
+                                    :src="bgGroom"
                                     class="w-56 h-56 object-cover scale-125 "
                                 />
                                 </div>
@@ -69,8 +66,8 @@ const anakPutri = props.urutPutri === 1 ? "pertama" : props.urutPutri === 2 ? "k
                         &
                     </h3>
                     <!-- <br> -->
-                    <div class="profileBride flex flex-col items-center w-[90%]">
-                        <div class="ïmageBride mb-4">
+                    <div class="profileBride">
+                        <div class="imageBride animated">
                             <div class="relative max-w-48 max-h-48">
                                 <div
                                 class="absolute top-[10%] -right-10 w-32 h-[80%] rounded-full
@@ -79,7 +76,7 @@ const anakPutri = props.urutPutri === 1 ? "pertama" : props.urutPutri === 2 ? "k
                             </div>
                             <div class="rounded-full overflow-hidden relative z-10 border-2 border-off-white/70" >
                                 <img
-                                    src="../../assets/photo/bg-odesaktu/bg-bride.webp"
+                                    :src="bgBride"
                                     class="w-56 h-56 object-cover scale-125"
                                 />
                             </div>
@@ -108,4 +105,16 @@ img{
     max-width: 160px;
     max-height: 160px;
 }
+
+.profileGroom, .profileBride{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imageGroom, .imageBride{
+    margin-bottom: 26px;
+}
+
 </style>
