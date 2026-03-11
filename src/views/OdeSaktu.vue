@@ -6,10 +6,10 @@ import { ref } from "vue";
 import MagatraCopyright from "@/components/textOnly/MagatraCopyright.vue";
 import NamaPengantinDynalight from "@/components/namaPengantin/NamaPengantinDynalight.vue";
 import OmSwastyastuText from "@/components/textOnly/OmSwastyastuText.vue";
-import AcaraResepsi from "@/components/textOnly/AcaraResepsi.vue";
 import FormReservasi2 from "@/components/textOnly/FormReservasi2.vue";
 import BlurredName from "@/components/carousels/BlurredName.vue";
 import BlackNamaMempelai from "@/components/namaPengantin/BlackNamaMempelai.vue";
+import PawiwahanResepsi from "@/components/datetime/PawiwahanResepsi.vue";
 
 // const ownerSlug = "ode-saktu";
 
@@ -100,8 +100,8 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="isiUndangan relative">
         <BlurredName :bride-name="'Saktu'" :groom-name="'Ode'" :total-images="4" :folder-path="'odesaktu/carousel'"></BlurredName>
         <OmSwastyastuText></OmSwastyastuText>
-        <BlackNamaMempelai :folder-path="'odesaktu'" :urutPutra="1" :urutPutri="5"></BlackNamaMempelai>
-        <AcaraResepsi></AcaraResepsi>
+        <BlackNamaMempelai :folder-path="'odesaktu'" :urutPutra="1" :urutPutri="1"></BlackNamaMempelai>
+        <PawiwahanResepsi :bg-path="'bg-odesaktu/bg-acara.webp'" :pwh-date="'23/03/2026'" :pwh-time-range="'09:00 - Selesai'" :rsp-date="'24/03/2026'" :rsp-time-range="'13:00 - 22:00 WITA'" :venue-address="'Jl. Pulau Obi Gang Juwet No. 12, Banyuning, Buleleng'" :maps-link="'https://maps.app.goo.gl/whcS9KNMvNWcbAqu8'"></PawiwahanResepsi>
         <FormReservasi2> </FormReservasi2>
         <MagatraCopyright class="bg-black"></MagatraCopyright>
         <audio loop class="hidden" preload="none" id="bgm" controlsList="nodownload" controls>
@@ -121,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </main>
 </template>
+
 <style scoped>
 #kontenUtama {
   background-color: #212529;
