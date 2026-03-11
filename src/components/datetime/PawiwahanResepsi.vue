@@ -57,20 +57,19 @@ let bgImage = require(`../../assets/photo/${props.bgPath}`);
 </script>
 <template>
     <div class="relative w-full flex flex-col justify-evenly py-10">
-        <div class="absolute inset-0 bg-black opacity-70 z-10"></div>
-        <div class="absolute inset-0 z-0"></div>
-        <div class="text-off-white z-20 relative text-center">
-             <img
+        <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
+        <div class="absolute inset-0 z-0"><img
                 :src="bgImage"
                 class="object-cover absolute" 
                 alt="..."
-            />
-            <p class="font-dynalight text-4xl tracking-widest leading-10 animated pt-6">
+            /></div>
+        <div class="text-off-white z-20 relative text-center">
+            <p class="font-dynalight text-4xl tracking-widest leading-10 animated">
                 Acara dan Resepsi
             </p>
         </div>
         <div
-            class="relative z-20 flex flex-col text-center mx-5 my-14 pt-3 bg-black/20 backdrop-blur-sm text-off-white animated">
+            class="relative z-20 flex flex-col text-center mx-5 my-10 pt-3 bg-black/20 backdrop-blur-sm text-off-white animated">
             <div class="waktuPelaksanaan animated">
                 <p class="font-dynalight text-2xl tracking-widest leading-10 mb-1">
                     Pawiwahan
@@ -109,16 +108,7 @@ let bgImage = require(`../../assets/photo/${props.bgPath}`);
                 </a>
             </div>
         </div>
-        <!-- <p class=" text-putih-keabuan z-20 relative text-center px-5">
-            Atas kehadiran dan doa restu Bapak/Ibu/Saudara/i, kami ucapkan terima kasih.
-        </p> -->
     </div>
 </template>
-
 <style scoped>
-.background-layer {
-    background-image: url("../../assets/photo/mangagus-dewi/background/beratan2.webp");
-    background-size: cover;
-    background-position: center;
-}
 </style>
