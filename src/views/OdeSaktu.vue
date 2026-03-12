@@ -8,9 +8,10 @@ import NamaPengantinDynalight from "@/components/namaPengantin/NamaPengantinDyna
 import OmSwastyastuText from "@/components/textOnly/OmSwastyastuText.vue";
 import BlurredName from "@/components/carousels/BlurredName.vue";
 import BlackNamaMempelai from "@/components/namaPengantin/BlackNamaMempelai.vue";
-import PawiwahanResepsi from "@/components/datetime/PawiwahanResepsi.vue";
+import BlackNamaMepandes from "@/components/namaPengantin/BlackNamaMepandes.vue";
 import GalerryRandomLayout from "@/components/layoutGaleri/GalleryRandomLayout.vue";
 import NewRsvpWithAttendance from "@/components/rsvpLayouts/NewRsvpWithAttendance.vue";
+import HariResepsi from "@/components/datetime/HariResepsi.vue";
 
 const ownerSlug = "ode-saktu";
 
@@ -101,10 +102,11 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="isiUndangan relative">
         <BlurredName :bride-name="'Saktu'" :groom-name="'Ode'" :total-images="4" :folder-path="'odesaktu/carousel'"></BlurredName>
         <OmSwastyastuText></OmSwastyastuText>
-        <BlackNamaMempelai :folder-path="'odesaktu'" :urutPutra="1" :urutPutri="1"></BlackNamaMempelai>
-        <PawiwahanResepsi :bg-path="'bg-odesaktu/bg-acara.webp'" :pwh-date="'23/03/2026'" :pwh-time-range="'09:00 - Selesai'" :rsp-date="'24/03/2026'" :rsp-time-range="'13:00 - 22:00 WITA'" :venue-address="'Jl. Pulau Obi Gang Juwet No. 12, Banyuning, Buleleng'" :maps-link="'https://maps.app.goo.gl/whcS9KNMvNWcbAqu8'"></PawiwahanResepsi>
+        <BlackNamaMempelai :bg-path="'bg-odesaktu/bg-galeri.webp'" :folder-path="'odesaktu'" :urutPutra="1" :urutPutri="1"></BlackNamaMempelai>
+        <BlackNamaMepandes :profile-path="'bg-odesaktu'" :urutPutra="3" :urutPutri="2"></BlackNamaMepandes>
+        <HariResepsi :bg-path="'bg-odesaktu/bg-acara.webp'" :pwh-date="'23/03/2026'" :pwh-time-range="'07:30 - Selesai'" :rsp-date="'24/03/2026'" :rsp-time-range="'11:00 - Selesai'" :venue-address="'Jl. Pulau Obi Gang Juwet No. 12, Banyuning, Buleleng'" :maps-link="'https://maps.app.goo.gl/whcS9KNMvNWcbAqu8'"></HariResepsi>
         <GalerryRandomLayout :bg-path="'bg-odesaktu/bg-galeri.webp'" :total-images="14" :folder-path="'odesaktu/galeri'"></GalerryRandomLayout>
-        <NewRsvpWithAttendance :bg-path="'bg-odesaktu/bg-wishes.webp'" :ownerName="ownerSlug" :ceremonyName="'Pawiwahan'"></NewRsvpWithAttendance>
+        <NewRsvpWithAttendance :bg-path="'bg-odesaktu/bg-galeri.webp'" :ownerName="ownerSlug" :ceremonyName="'Pawiwahan'"></NewRsvpWithAttendance>
         <MagatraCopyright class="bg-black"></MagatraCopyright>
         <audio loop class="hidden" preload="none" id="bgm" controlsList="nodownload" controls>
           <source src="../assets/music/HarmoniA_ft_Rusmina_Dewi_-_Sehidup_Semati.mp3" type="audio/mp3" />
