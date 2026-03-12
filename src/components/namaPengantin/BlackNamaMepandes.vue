@@ -54,7 +54,7 @@ for(let i=1; i<props.totalPerson+1; i++){
                                 <div class="w-full h-full rounded-full overflow-hidden relative z-10 border-2 border-off-white/70">
                                 <img
                                     :src="photoProfiles[0]"
-                                    class="w-56 h-56 object-cover scale-125 "
+                                    class="w-48 h-48 object-cover scale-125 "
                                 />
                                 </div>
                             </div>
@@ -85,7 +85,7 @@ for(let i=1; i<props.totalPerson+1; i++){
                             <div class="rounded-full overflow-hidden relative z-10 border-2 border-off-white/70" >
                                 <img
                                     :src="photoProfiles[1]"
-                                    class="w-56 h-56 object-cover scale-125"
+                                    class="w-48 h-48 object-cover scale-125"
                                 />
                             </div>
                         </div>
@@ -109,10 +109,6 @@ for(let i=1; i<props.totalPerson+1; i++){
 </template>
 
 <style scoped>
-img{
-    max-width: 160px;
-    max-height: 160px;
-}
 
 .profileGroom, .profileBride{
     width: 90%;
