@@ -14,7 +14,7 @@ import { ref } from "vue";
 
 const plugins = [lgThumbnail, lgZoom];
 
-const visibleCount = ref(6);
+const visibleCount = ref(8);
 
 const props = defineProps({
   bgPath: {
@@ -41,9 +41,9 @@ for (let i = 1; i <= props.totalImages; i++) {
 </script>
 
 <template>
-  <div class="relative w-full flex flex-col py-12">
+  <div class="relative w-full flex flex-col h-fit">
     <div
-      class="shadow-layer absolute h-screen inset-0 bg-black opacity-50 z-10"
+      class="shadow-layer absolute h-fit inset-0 bg-black opacity-50 z-10"
     ></div>
     <div class="relative">
       <img
@@ -54,7 +54,7 @@ for (let i = 1; i <= props.totalImages; i++) {
       <div
         class="main-content relative z-20 flex flex-col justify-center text-center h-[80%] mx-7"
       >
-        <div class="textAwalan text-off-white pt-8">
+        <div class="textAwalan text-off-white pt-20">
           <p class="font-dynalight text-4xl mb-3 animated">
                         Galeri Foto
           </p>
@@ -85,7 +85,7 @@ for (let i = 1; i <= props.totalImages; i++) {
               </div>
             </a>
             <a
-              v-for="(img, i) in allImages.slice(6, allImages.length)"
+              v-for="(img, i) in allImages.slice(8, allImages.length)"
               :key="i"
               :href="img"
               :data-src="img"
