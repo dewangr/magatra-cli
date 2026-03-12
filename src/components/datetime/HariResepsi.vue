@@ -54,7 +54,7 @@ let bgImage = require(`../../assets/photo/${props.bgPath}`);
         </div>
         <div class="text-off-white z-20 relative text-center">
             <p class="font-dynalight text-4xl tracking-widest leading-10 animated mt-10">
-                Resepsi Pernikahan
+                Resepsi 
             </p>
         </div>
         <div
