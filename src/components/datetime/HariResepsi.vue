@@ -58,7 +58,7 @@ let bgImage = require(`../../assets/photo/${props.bgPath}`);
             </p>
         </div>
         <div
-            class="relative z-20 flex flex-col text-center mx-5 my-10 pt-3 bg-black/20 backdrop-blur-sm text-off-white animated">
+            class="relative z-20 flex flex-col text-center mx-5 my-10 pt-3 rounded-md bg-black/20 backdrop-blur-sm text-off-white animated">
             <div class="waktuPelaksanaan animated">
                 <div class="waktuPelaksanaan animated">
                     <p class="font-dynalight text-2xl tracking-widest leading-10 mb-1">
@@ -77,12 +77,13 @@ let bgImage = require(`../../assets/photo/${props.bgPath}`);
                     <h4>{{ props.venueAddress }}</h4>
                 </div>
 
-                <div class="googleMaps my-6 animated">
+                <div class="googleMaps my-6 justify-center flex flex-col items-center">
                     <a :href="props.mapsLink" type="button"
-                        class="z-20 border border-putih-keabuan/80 bg-putih-keabuan/10 px-5 py-2" target="_blank"
+                        class="z-20 animated border border-putih-keabuan/80 bg-putih-keabuan/10 px-5 py-2" target="_blank"
                         rel="noopener">
                         Google Maps
                     </a>
+                    <iframe class="animated max-w-80 h-60 mt-10 rounded-md" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3949.9962391189533!2d115.10309707412593!3d-8.101863681040081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMDYnMDYuNyJTIDExNcKwMDYnMjAuNCJF!5e0!3m2!1sen!2sid!4v1773325486261!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
