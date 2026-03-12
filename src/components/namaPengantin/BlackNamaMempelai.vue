@@ -15,7 +15,12 @@ const props = defineProps({
   urutPutri:{
     type: Number,
     default: 1,
-  }
+  }, 
+  bgPath: {
+    type: String,
+    default: "bg/bg-pengantin.webp",
+    required: true,
+  },
 });
 
 const anakPutra = props.urutPutra === 1 ? "pertama" : props.urutPutra === 2 ? "kedua" : props.urutPutra === 3 ? "ketiga" : `ke-${props.urutPutra}`;
@@ -24,10 +29,17 @@ const anakPutri = props.urutPutri === 1 ? "pertama" : props.urutPutri === 2 ? "k
 const bgGroom = require(`../../assets/photo/bg-${props.folderPath}/bg-groom.webp`);
 const bgBride = require(`../../assets/photo/bg-${props.folderPath}/bg-bride.webp`);
 
+
+// let bgImage = require(`../../assets/photo/${props.bgPath}`);
 </script>
 
 <template>
-    <div class="flex h-fit justify-center bg-black py-3 pb-20">
+    <div class="relative flex flex-col h-fit justify-center bg-black py-3 pb-20">
+        <!-- <div class="absolute inset-0 z-0 h-full w-full"><img
+                :src="bgImage"
+                class="object-cover absolute" 
+                alt="..."
+            /></div> -->
         <div class="main-content flex flex-col justify-center text-center">
             <div class="text-off-white">
                 <div
@@ -59,7 +71,7 @@ const bgBride = require(`../../assets/photo/bg-${props.folderPath}/bg-bride.webp
                                 & Ibu Luh Widiasih Candradewi
                             </p>
                         </div>
-                        <p class="mt-1 text-sm animated">Jalan Pulau Obi, Banyuning, Buleleng</p>
+                        <p class="alamat text-sm animated">Jalan Pulau Obi, Banyuning, Buleleng</p>
                         <!-- <br> -->
                     </div>
                     <h3 class="font-dynalight text-4xl my-5 animated">
@@ -92,7 +104,7 @@ const bgBride = require(`../../assets/photo/bg-${props.folderPath}/bg-bride.webp
                                 & Ibu Desak Komang Sukarini (Alm)
                             </p>
                         </div>
-                        <p class="mt-1 text-sm animated">Perumahan Permai Lestari, Penglatan Dauh Tukad, Buleleng</p>
+                        <p class="alamat text-sm animated">Perumahan Permai Lestari, Penglatan Dauh Tukad, Buleleng</p>
                     </div>
                 </div>
             </div>
@@ -117,4 +129,8 @@ img{
     margin-bottom: 26px;
 }
 
+.alamat {
+    margin-top: 4px;
+    color: var(--color-putih-keabuan);
+}
 </style>
