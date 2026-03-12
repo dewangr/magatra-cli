@@ -19,7 +19,11 @@ const props = defineProps({
   totalPerson: {
     type: Number,
     default: 2,
-  }
+  }, 
+  bgPath: {
+    type: String,
+    required: true,
+  },
 });
 
 const anakPutra = props.urutPutra === 1 ? "pertama" : props.urutPutra === 2 ? "kedua" : props.urutPutra === 3 ? "ketiga" : `ke-${props.urutPutra}`;
@@ -30,10 +34,16 @@ for(let i=1; i<props.totalPerson+1; i++){
     photoProfiles.push(require(`../../assets/photo/${props.profilePath}/dp (${i}).webp`));
 }
 
+let bgImage = require(`../../assets/photo/${props.bgPath}`);
 </script>
 
 <template>
     <div class="relative flex flex-col h-fit justify-center bg-black py-3 pb-20">
+        <div class="absolute inset-0 z-0 h-full w-full"><img
+                :src="bgImage"
+                class="object-cover absolute opacity-50 w-full h-full" 
+                alt="..."
+            /></div>
         <div class="textJudul text-center mb-3 text-off-white">
                         <p class="font-dynalight text-4xl tracking-widest leading-10 animated">
                             Mepandes

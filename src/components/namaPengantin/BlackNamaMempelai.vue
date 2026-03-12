@@ -30,16 +30,16 @@ const bgGroom = require(`../../assets/photo/bg-${props.folderPath}/bg-groom.webp
 const bgBride = require(`../../assets/photo/bg-${props.folderPath}/bg-bride.webp`);
 
 
-// let bgImage = require(`../../assets/photo/${props.bgPath}`);
+let bgImage = require(`../../assets/photo/${props.bgPath}`);
 </script>
 
 <template>
     <div class="relative flex flex-col h-fit justify-center bg-black py-3 pb-20">
-        <!-- <div class="absolute inset-0 z-0 h-full w-full"><img
+        <div class="absolute inset-0 z-0 h-full w-full"><img
                 :src="bgImage"
-                class="object-cover absolute" 
+                class="object-cover absolute opacity-50 w-full h-full" 
                 alt="..."
-            /></div> -->
+            /></div>
         <div class="main-content flex flex-col justify-center text-center">
             <div class="text-off-white">
                 <div
