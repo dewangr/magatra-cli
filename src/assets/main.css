@@ -85,7 +85,7 @@ a {
   line-height: 1.5;
   font-weight: 400;
 
-  background-color: var(--color-alt-dark);
+  background-color: black;
   color-scheme: light dark;
 
   font-family: "Karla", sans-serif;
