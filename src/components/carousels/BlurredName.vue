@@ -57,10 +57,9 @@ for (let i = 1; i <= props.totalImages; i++) {
       </div>
       <div class="main-content absolute inset-0 z-10 flex flex-col justify-between items-center py-10">
         <div class="z-20 relative flex flex-col py-6 mt-6 ">
-        <NamaPengantinDynalight class="animated text-4xl mb-4" :bride-name="'Saktu'" :groom-name="'Ode'"
-        :title-text="'Pawiwahan'" />
-      <h4 class="flex justify-center text-putih-keabuan tracking-widest animated -mt-2">23 Maret 2026</h4>
-    </div>
+            <NamaPengantinDynalight class="animated text-4xl mb-4" :bride-name="'Saktu'" :groom-name="'Ode'"
+            :title-text="'Pawiwahan'" />
+        </div>
         <div
           class="ayatWeda flex flex-col mx-5 text-center animated text-off-white space-y-4 leading-relaxed"
         >
@@ -75,6 +74,7 @@ for (let i = 1; i <= props.totalImages; i++) {
           </p>
         </div>
       </div>
+      <div class="relative h-12 w-full bg-gradient-to-b from-transparent to-black/100 "></div>
     </div>
   </div>
 </template>
