@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ></ListBankToTransfer>
         <MagatraCopyright></MagatraCopyright>
         <audio loop class="hidden" preload="none" id="bgm" controlsList="nodownload" controls>
-          <source src="../assets/music/HarmoniA_ft_Rusmina_Dewi_-_Sehidup_Semati.mp3" type="audio/mp3" />
+          <source src="../assets/music/Rizky_Febian_Ft._Mahalini-Bermuara_[Karaoke_Version].mp3" type="audio/mp3" />
         </audio>
       </div>
       <div class="audioButton fixed bottom-1 right-0 m-4 z-20">
