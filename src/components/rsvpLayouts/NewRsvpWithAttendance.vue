@@ -9,7 +9,7 @@
         descSection: {
             type: String,
             required: false,
-            default: "Mohon doa restu untuk kedua mempelai, dan silakan isi form dibawah ini untuk mengirimkan ucapan atau konfirmasi kehadiran Anda.",
+            default: "Mohon doa restu untuk kedua mempelai, dan silakan isi form dibawah ini untuk mengirimkan ucapan dan konfirmasi kehadiran Anda.",
         },
         bgPath: {
             type: String,
@@ -45,7 +45,7 @@
 </script>
 <template>
     <div class="relative w-full flex flex-col">
-        <div class="flex relative h-fit justify-end bg-black py-10">
+        <div class="flex relative h-fit justify-end bg-black">
             <div
                 class="main-content relative z-20 flex flex-col justify-center sm:w-[60%] md:w-full h-[55%] mx-7 py-5">
                 <div class="formReservasi flex flex-col ">
