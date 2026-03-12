@@ -12,6 +12,7 @@ import BlackNamaMepandes from "@/components/namaPengantin/BlackNamaMepandes.vue"
 import GalerryRandomLayout from "@/components/layoutGaleri/GalleryRandomLayout.vue";
 import NewRsvpWithAttendance from "@/components/rsvpLayouts/NewRsvpWithAttendance.vue";
 import HariResepsi from "@/components/datetime/HariResepsi.vue";
+import ListBankToTransfer from "@/components/bankTransfer/ListBankToTransfer.vue";
 
 const ownerSlug = "ode-saktu";
 
@@ -106,8 +107,15 @@ document.addEventListener("DOMContentLoaded", function () {
         <BlackNamaMepandes :profile-path="'bg-odesaktu'" :urutPutra="3" :urutPutri="2"></BlackNamaMepandes>
         <HariResepsi :bg-path="'bg-odesaktu/bg-acara.webp'" :pwh-date="'23/03/2026'" :pwh-time-range="'07:30 - Selesai'" :rsp-date="'24/03/2026'" :rsp-time-range="'11:00 - Selesai'" :venue-address="'Jl. Pulau Obi Gang Juwet No. 12, Banyuning, Buleleng'" :maps-link="'https://maps.app.goo.gl/whcS9KNMvNWcbAqu8'"></HariResepsi>
         <GalerryRandomLayout :bg-path="'bg-odesaktu/bg-galeri.webp'" :total-images="14" :folder-path="'odesaktu/galeri'"></GalerryRandomLayout>
+        <!-- <GalerryRandomLayout :bg-path="'bg-odesaktu/bg-galeri.webp'" :title-section="'Galeri Mepandes'" :total-images="12" :folder-path="'mepandes/dadas-ngr/galeri'"></GalerryRandomLayout> -->
         <NewRsvpWithAttendance :bg-path="'bg-odesaktu/bg-galeri.webp'" :ownerName="ownerSlug" :ceremonyName="'Pawiwahan'"></NewRsvpWithAttendance>
-        <MagatraCopyright class="bg-black"></MagatraCopyright>
+        <ListBankToTransfer
+          :bg-path="'bg-odesaktu/bg-galeri.webp'"
+          :text-tittle="'Amplop Digital'"
+          :text-content="'Tanpa mengurangi rasa hormat kami, bagi tamu yang ingin mengirimkan hadiah kepada kedua mempelai dapat mengirimnya melalui'"
+          :bank-number="'8271056966'"
+        ></ListBankToTransfer>
+        <MagatraCopyright></MagatraCopyright>
         <audio loop class="hidden" preload="none" id="bgm" controlsList="nodownload" controls>
           <source src="../assets/music/HarmoniA_ft_Rusmina_Dewi_-_Sehidup_Semati.mp3" type="audio/mp3" />
         </audio>
