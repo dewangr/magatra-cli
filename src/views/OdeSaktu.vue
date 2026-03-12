@@ -6,13 +6,13 @@ import { ref } from "vue";
 import MagatraCopyright from "@/components/textOnly/MagatraCopyright.vue";
 import NamaPengantinDynalight from "@/components/namaPengantin/NamaPengantinDynalight.vue";
 import OmSwastyastuText from "@/components/textOnly/OmSwastyastuText.vue";
-import FormReservasi2 from "@/components/textOnly/FormReservasi2.vue";
 import BlurredName from "@/components/carousels/BlurredName.vue";
 import BlackNamaMempelai from "@/components/namaPengantin/BlackNamaMempelai.vue";
 import PawiwahanResepsi from "@/components/datetime/PawiwahanResepsi.vue";
 import GalerryRandomLayout from "@/components/layoutGaleri/GalleryRandomLayout.vue";
+import NewRsvpWithAttendance from "@/components/rsvpLayouts/NewRsvpWithAttendance.vue";
 
-// const ownerSlug = "ode-saktu";
+const ownerSlug = "ode-saktu";
 
 const route = useRoute();
 const invitedPerson = ref(route.query.to || "Tamu Undangan");
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <BlackNamaMempelai :folder-path="'odesaktu'" :urutPutra="1" :urutPutri="1"></BlackNamaMempelai>
         <PawiwahanResepsi :bg-path="'bg-odesaktu/bg-acara.webp'" :pwh-date="'23/03/2026'" :pwh-time-range="'09:00 - Selesai'" :rsp-date="'24/03/2026'" :rsp-time-range="'13:00 - 22:00 WITA'" :venue-address="'Jl. Pulau Obi Gang Juwet No. 12, Banyuning, Buleleng'" :maps-link="'https://maps.app.goo.gl/whcS9KNMvNWcbAqu8'"></PawiwahanResepsi>
         <GalerryRandomLayout :bg-path="'bg-odesaktu/bg-galeri.webp'" :total-images="14" :folder-path="'odesaktu/galeri'"></GalerryRandomLayout>
-        <FormReservasi2> </FormReservasi2>
+        <NewRsvpWithAttendance :bg-path="'bg-odesaktu/bg-wishes.webp'" :ownerName="ownerSlug" :ceremonyName="'Pawiwahan'"></NewRsvpWithAttendance>
         <MagatraCopyright class="bg-black"></MagatraCopyright>
         <audio loop class="hidden" preload="none" id="bgm" controlsList="nodownload" controls>
           <source src="../assets/music/HarmoniA_ft_Rusmina_Dewi_-_Sehidup_Semati.mp3" type="audio/mp3" />
