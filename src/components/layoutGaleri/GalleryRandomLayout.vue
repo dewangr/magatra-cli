@@ -29,6 +29,10 @@ const props = defineProps({
     type: String,
     default: "odesaktu/galeri",
   },
+  titleSection: {
+    type: String,
+    default: "Galeri Foto",
+  },
 });
 
 let allImages = [];
@@ -56,7 +60,7 @@ for (let i = 1; i <= props.totalImages; i++) {
       >
         <div class="textAwalan text-off-white pt-20">
           <p class="font-dynalight text-4xl mb-3 animated">
-                        Galeri Foto
+                        {{ props.titleSection }}
           </p>
         </div>
         <div class="galeriFoto mt-3 h-[60%]" id="galeri-foto">
