@@ -15,7 +15,7 @@ const props = defineProps ({
 </script>
 <template>
     <div class="relative w-full flex flex-col">
-        <div class="bg-black flex relative h-fit justify-end py-10">
+        <div class="bg-black flex relative h-fit justify-end py-20">
             <div
                 class="main-content relative z-20 flex flex-col justify-center text-center sm:w-[60%] md:w-full h-[55%] mx-7">
                 <div>
