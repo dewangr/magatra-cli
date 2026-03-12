@@ -43,7 +43,7 @@ function copyToClipboard(event) {
              <div class="relative">
                 <img
                     :src="require(`../../assets/photo/${bgPath}`)"
-                    class="object-cover absolute opacity-8"
+                    class="object-cover absolute opacity-70"
                     alt="..."
                 />
             <div
