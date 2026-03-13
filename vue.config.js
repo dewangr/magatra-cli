@@ -13,12 +13,15 @@ module.exports = defineConfig({
       }),
       new PrerenderSPAPlugin({
         staticDir: path.join(__dirname, "dist"),
-        routes: ["/", "/dekdwi-manik/"],
-        renderAfterDocumentEvent: 'render-event',
-         customRendererConfig: {
-          args: ['--no-sandbox', '--disable-setuid-sandbox']
-        },
-      }),
+        routes: ["/", "/dekdwi-manik/", "/ode-saktu/" ],
+        renderAfterDocumentEvent: "render-event",
+        maxConcurrentRoutes: 1,
+        renderer: new PrerenderSPAPlugin.PuppeteerRenderer({
+          renderAfterDocumentEvent: "render-event",
+          timeout: 10000,
+          args: ["--no-sandbox", "--disable-setuid-sandbox"],
+        }),
+      })
     ],
   },
 });
