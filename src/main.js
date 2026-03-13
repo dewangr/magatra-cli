@@ -4,13 +4,21 @@ import { createApp, nextTick } from "vue";
 import { createHead } from "@unhead/vue/client";
 import App from "./App.vue";
 import router from "./router";
-import './assets/tailwind.css'
+import "./assets/tailwind.css";
 
 const app = createApp(App);
-app.use(createHead());
+const head = createHead();
 
-app.use(router).mount("#app");
+app.use(head);
 
-nextTick(() => {
-  document.dispatchEvent(new Event('render-event'));
+
+router.isReady().then(async () => {
+  app.use(router).mount("#app");
+
+  await nextTick();
+  await nextTick();
+    
+  setTimeout(() => {
+    document.dispatchEvent(new Event("render-event"));
+  }, 2000);
 });

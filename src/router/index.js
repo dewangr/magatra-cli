@@ -9,28 +9,38 @@ import OdeSaktu from "@/views/OdeSaktu.vue";
 
 const routes = [
   {
-    path: "/indra-rika/",
+    path: "/indra-rika",
     name: "Wedding1Views",
     component: Wedding1Views,
     props: true,
   },
   {
-    path: "/mangagus-dewi/",
+    path: "/mangagus-dewi",
     name: "TextOnlyViews1",
     component: TextOnlyViews1,
     props: true,
-  },{
-    path: "/dekdwi-manik/",
+  },
+  {
+    path: "/dekdwi-manik",
     name: "DekDwiManik",
     component: DekDwiManik,
     props: true,
+    meta: {
+      title: "Undangan Pawiwahan Dwi & Manik",
+      description: "Resepsi pada 24 Maret 2026 di Perumahan Kirana 1, Ds. Panji, Buleleng",
+      image: "https://magatra.site/photos/metaInfo/dwimanik.jpg"
+    }
   },
   {
-    path: "/ode-saktu/",
+    path: "/ode-saktu",
     name: "OdeSaktu",
     component: OdeSaktu,
     props: true,
-
+    meta: {
+      title: "Undangan Pawiwahan Ode & Saktu",
+      description: "24 Maret 2026 - Jln. Pulau Obi Gg. Juwet, Banyuning, Buleleng",
+      image: "https://magatra.site/photos/metaInfo/odesaktu.jpg"
+    }
   },
   {
     path: "/telubulanan/anakdika",

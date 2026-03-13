@@ -3,6 +3,9 @@ import "@/assets/main.css";
 
 import { useRoute } from "vue-router";
 import { ref } from "vue";
+import { useHead } from "@unhead/vue";
+import { computed } from "vue";
+
 import MagatraCopyright from "@/components/textOnly/MagatraCopyright.vue";
 import NamaPengantinDynalight from "@/components/namaPengantin/NamaPengantinDynalight.vue";
 import OmSwastyastuText from "@/components/textOnly/OmSwastyastuText.vue";
@@ -15,8 +18,22 @@ import HariResepsi from "@/components/datetime/HariResepsi.vue";
 import ListBankToTransfer from "@/components/bankTransfer/ListBankToTransfer.vue";
 
 const ownerSlug = "ode-saktu";
-
 const route = useRoute();
+
+const headData = computed(() => ({
+  title: route.meta.title,
+  meta: [
+    { property: "og:title", content: route.meta.title },
+    { property: "og:description", content: route.meta.description },
+    { property: "og:image", content: route.meta.image },
+    { property: "og:url", content: `https://magatra.site${route.fullPath}` },
+    { name: "twitter:title", content: route.meta.title },
+    { name: "twitter:description", content: route.meta.description },
+    { name: "twitter:image", content: route.meta.image }
+  ]
+}));
+useHead(headData, { tagPriority: "critical" });
+
 const invitedPerson = ref(route.query.to || "Tamu Undangan");
 
 function clickBukaUndangan() {
