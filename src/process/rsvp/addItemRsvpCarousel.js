@@ -26,5 +26,5 @@ export async function addItemRsvpCarousel(ownerName, ceremonyType, guestName, gu
   }
 
   // pass a plain value when refreshing
-  getDataRsvpByOwner(unref(ownerName)); // Refresh data after adding new item
+  await getDataRsvpByOwner(unref(ownerName)); // Refresh data after adding new item
 }
