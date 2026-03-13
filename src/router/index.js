@@ -5,6 +5,7 @@ import NotFoundView from "@/views/NotFoundView.vue";
 import UnderConstructionView from "@/views/UnderConstructionView.vue";
 import OtonanTelubulanan from "@/views/OtonanTelubulanan.vue";
 import DekDwiManik from "@/views/DekDwiManik.vue";
+import OdeSaktu from "@/views/OdeSaktu.vue";
 
 const routes = [
   {
@@ -24,7 +25,13 @@ const routes = [
     component: DekDwiManik,
     props: true,
   },
+  {
+    path: "/ode-saktu/",
+    name: "OdeSaktu",
+    component: OdeSaktu,
+    props: true,
 
+  },
   {
     path: "/telubulanan/anakdika",
     name: "OtonanTelubulanan",

@@ -113,7 +113,7 @@ document.dispatchEvent(new Event('render-event'));
             </h3>
             <button
               type="button"
-              class="btn-buka-undangan animated text-alt-dark"
+              class="btn-buka-undangan z-40 animated text-alt-dark"
               id="btn-buka"
               @click="clickBukaUndangan()"
             >
