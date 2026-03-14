@@ -70,7 +70,7 @@ let bgImage = require(`../../assets/photo/${props.bgPath}`);
                             </div>
                         </div>
                         <h3 class="font-dynalight text-2xl animated">
-                        Dewa Ayu Dwi Astiti Satriningrum
+                        Dewa Ayu Dwi Astiti Satrianingrum
                         </h3>
                         <div class="mt-3 text-sm text-putih-keabuan animated">
                             <p>Putri {{ anakPutri }} dari pasangan</p>
