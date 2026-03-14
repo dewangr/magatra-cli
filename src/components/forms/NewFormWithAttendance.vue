@@ -3,7 +3,9 @@
 import "@/assets/main.css";
 import { addItemRsvpCarousel } from "@/process/rsvp/addItemRsvpCarousel";
 import { convertCeremonyNameToEnum } from "@/process/rsvp/convertCeremonyNameToEnum";
-import { ref, defineProps } from "vue";
+import { ref, defineProps, defineEmits } from "vue";
+
+const emit = defineEmits(["submitted"]);
 
 const props = defineProps ({
     ownerName: {
@@ -37,6 +39,7 @@ async function handleSubmit() {
     guestAttendance
   );
   clearafterSubmit();
+  emit("submitted");
 }
   
 </script>
