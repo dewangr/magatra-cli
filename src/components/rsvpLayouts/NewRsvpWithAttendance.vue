@@ -1,9 +1,9 @@
 <script setup>
     import "@/assets/main.css";
-    import CardUcapan from "./../cardUcapan.vue";
     import { onMounted, ref, defineProps } from "vue";
     import { getDataRsvpByOwner } from "@/process/rsvp/getDataRsvpByOwner";
     import NewFormWithAttendance from "../forms/NewFormWithAttendance.vue";
+    import WhiteTransparentBubble from "../bubbles/WhiteTransparentBubble.vue";
 
     const props = defineProps({
         descSection: {
@@ -27,18 +27,23 @@
         }
     });
 
-    const rspvData = ref([]);
+    let rspvData = ref([]);
+
+    async function loadRsvpData() {
+        const data = await getDataRsvpByOwner(props.ownerName);
+        if (data && data.value) {
+            rspvData.value = data.value;
+        }
+    }
 
     onMounted(() => {
-    getDataRsvpByOwner(props.ownerName).then((data) => {
-        rspvData.value = data.value;
-    });
+        loadRsvpData();
     });
 
     setInterval(async () => {
-    await getDataRsvpByOwner(props.ownerName);
-    console.log("Data refreshed");
-    }, 5000); // Refresh every minute
+        await loadRsvpData();
+        console.log("Data refreshed");
+    }, 5000); // Refresh every 5 seconds
 
 
     let bgImage = require(`../../assets/photo/${props.bgPath}`);
@@ -57,19 +62,8 @@
                             {{ props.descSection }}
                         </p>
                     </div>
-                    <NewFormWithAttendance :ownerName="props.ownerName" :ceremonyName="props.ceremonyName"/>
-                    <!-- <div
-                        class="hasilReservasi mt-7 flex flex-col max-h-56 lg:max-h-48 overflow-y-scroll animated">
-                        <KehadiranText
-                            v-for="(data, id) in rspvData"
-                            :key="id"
-                            :namaTamu="data.nama_tamu"
-                            :ucapan="data.ucapan"
-                            :timestampKomentar="data.created_at"
-                            :konfirmasiKehadiran="data.kehadiran"
-                        />
-                    </div> -->
-                </div>
+                    <NewFormWithAttendance :ownerName="props.ownerName" :ceremonyName="props.ceremonyName" @submitted="loadRsvpData"/>
+                </div>  
             </div>
         </div>
         <div class="hasil-reservasi">
@@ -80,9 +74,8 @@
             />
             <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
             <div class="kartu-ucapan relative z-20 py-8 flex px-5 flex-col overflow-y-scroll animated">
-                <CardUcapan class="bg-putih-keabuan/70 backdrop-blur-md rounded-none text-start animated"
-                    v-for="(data, id) in rspvData" :key="id" :namaTamu="data.guestName" :ucapan="data.guestMessage"
-                    :timestampKomentar="data.created_at" />
+                <WhiteTransparentBubble class="mb-5 bg-putih-keabuan/70 backdrop-blur-md rounded-sm text-start animated" 
+                v-for="(data, id) in rspvData" :key="id" :guestName="data.guestName" :guestMessage="data.guestMessage" :commentsTimestamp="data.created_at" :attendanceEnum="data.guestAttendance"/>
             </div>
             <div class="relative z-20 py-16 flex px-5 flex-col text-sm text-putih-keabuan text-center animated">
                 <p class="mb-2 animated">
@@ -101,13 +94,6 @@
 .main-content {
     grid-template-rows: 4fr 1fr;
 }
-
-/* .hasil-reservasi {
-    background-image: url("../../assets/photo/mangagus-dewi/background/lempuyang.webp");
-    background-size: cover;
-    background-position: center;
-} */
-
 .kartu-ucapan {
     max-height: 550px;
 }
