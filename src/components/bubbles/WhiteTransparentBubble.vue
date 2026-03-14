@@ -37,7 +37,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <div class="textUcapan bg-putih-keabuan p-3 rounded-sm mb-4 mx-2 opacity-70">
+  <div class="textUcapan bg-putih-keabuan p-3 rounded-md mb-4 mx-2 opacity-70">
     <div class="namaDanKonfirmasi flex flex-row text-[16px] items-center justify-between">
       <p class="namaTamuReservasi text-alt-dark tracking-wider text-sm">
         <b>{{ guestName }} &nbsp;</b>
