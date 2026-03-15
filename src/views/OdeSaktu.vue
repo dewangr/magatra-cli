@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <BlackNamaMepandes :bg-path="'bg-odesaktu/bg-galeri.webp'" :profile-path="'bg-odesaktu'" :urutPutra="3" :urutPutri="2"></BlackNamaMepandes>
         <HariResepsi :bg-path="'bg-odesaktu/bg-acara.webp'" :pwh-date="'23/03/2026'" :pwh-time-range="'07:30 - Selesai'" :rsp-date="'24/03/2026'" :rsp-time-range="'11:00 - Selesai'" :venue-address="'Jl. Pulau Obi Gang Juwet No. 12, Banyuning, Buleleng'" :maps-link="'https://maps.app.goo.gl/whcS9KNMvNWcbAqu8'"></HariResepsi>
         <GalerryRandomLayout :bg-path="'bg-odesaktu/bg-galeri.webp'" :total-images="14" :folder-path="'odesaktu/galeri'"></GalerryRandomLayout>
-        <GalerryRandomLayout :bg-path="'bg-odesaktu/bg-galeri.webp'" :title-section="'Galeri Mepandes'" :total-images="12" :folder-path="'odesaktu/mepandes'"></GalerryRandomLayout>
+        <GalerryRandomLayout :bg-path="'bg-odesaktu/bg-galeri.webp'" :title-section="'Galeri Mepandes'" :total-images="12" :folder-path="'odesaktu/metatah'"></GalerryRandomLayout>
         <NewRsvpWithAttendance :bg-path="'bg-odesaktu/bg-galeri.webp'" :ownerName="ownerSlug" :ceremonyName="'Pawiwahan'"></NewRsvpWithAttendance>
         <ListBankToTransfer
           :bg-path="'bg-odesaktu/bg-galeri.webp'"
