@@ -14,7 +14,7 @@ import { ref } from "vue";
 
 const plugins = [lgThumbnail, lgZoom];
 
-const visibleCount = ref(8);
+const visibleCount = ref(6);
 
 const props = defineProps({
   bgPath: {
@@ -89,7 +89,7 @@ for (let i = 1; i <= props.totalImages; i++) {
               </div>
             </a>
             <a
-              v-for="(img, i) in allImages.slice(8, allImages.length)"
+              v-for="(img, i) in allImages.slice(6, allImages.length)"
               :key="i"
               :href="img"
               :data-src="img"
