@@ -34,7 +34,7 @@ const routes = [
 
   },
   {
-    path:"/darma-ayu/",
+    path:"/gede-dewayu/",
     name: "DarmaAyudwi",
     component: DarmaAyudwi,
     props: true,

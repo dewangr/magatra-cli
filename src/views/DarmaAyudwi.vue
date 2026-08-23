@@ -13,7 +13,9 @@ import NewRsvpWithAttendance from "@/components/rsvpLayouts/NewRsvpWithAttendanc
 import HariResepsi from "@/components/datetime/HariResepsi.vue";
 import MultipleBankAccounts from "@/components/bankTransfer/multipleBankAccounts.vue";
 
-const ownerSlug = "darma-ayudwi";
+const ownerSlug = "gede-dewayu";
+const groomName = "Gede";
+const brideName = "Dewayu";
 
 const route = useRoute();
 const invitedPerson = ref(route.query.to || "Tamu Undangan");
@@ -91,7 +93,7 @@ const bankAccounts = [
         <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
         <div class="background-sampul absolute inset-0 z-0"></div>
         <div class="konten-sampul flex flex-col items-center justify-between h-full pb-40 z-20 relative">
-          <NamaPengantinDynalight class="mb-2 mt-20 animated" :bride-name="'Ayudwi'" :groom-name="'Darma'"
+          <NamaPengantinDynalight class="mb-2 mt-20 animated" :bride-name="brideName" :groom-name="groomName"
             :title-text="'Pawiwahan'" />
           <div class="ds-tamu-undangan flex flex-col items-center float-end mt-30">
             <div class="gelar-tamu animated flex flex-col items-center">
@@ -113,13 +115,13 @@ const bankAccounts = [
     </div>
     <div id="kontenUtama" class="hidden absolute md:w-96 inset-y-0 right-0 ">
       <div class="isiUndangan relative">
-        <BlurredName :bride-name="'Ayudwi'" :groom-name="'Darma'" :total-images="4" :folder-path="'darmaayu/crs'"></BlurredName>
+        <BlurredName :bride-name="brideName" :groom-name="groomName" :total-images="5" :folder-path="'gededewayu/crs'"></BlurredName>
         <OmSwastyastuText></OmSwastyastuText>
-        <BlackNamaMempelai :bg-path="'bg-darmaayu/bg-galeri.webp'" :folder-path="'darmaayu'" :urutPutra="5" :urutPutri="2" :nama-pria="'I Gede Darmanidiawan'" :nama-wanita="'Dewa Ayu Dwi Astiti Satrianingrum'" :ayah-pria="'Ketut Suteja (Alm)'" :ibu-pria="'Ni Luh Dadi'" :ayah-wanita="'I Dewa Nyoman Adnyana (Alm)'" :ibu-wanita="'Luh Widiasih Candradewi'" :alamat-wanita="'Jalan Pulau Obi, Banyuning, Buleleng'" :alamat-pria="'Br. Dinas Wanasari, Ds. Tigawasa, Buleleng'"></BlackNamaMempelai>
-        <HariResepsi :bg-path="'bg-darmaayu/bg-acara.webp'" :rsp-date="'03/09/2026'" :rsp-time-range="'14:00 - Selesai'" :venue-address="'Br. Dinas Wanasari, Ds. Tigawasa, Buleleng'" :maps-link="'https://maps.app.goo.gl/TTPFWudcZBDz4Wws6?g_st=iw'"></HariResepsi>
-        <GalerryRandomLayout :bg-path="'bg-darmaayu/bg-galeri.webp'" :total-images="35" :folder-path="'darmaayu/galeri'"></GalerryRandomLayout>
-        <MultipleBankAccounts :bg-path="'bg-darmaayu/bg-galeri.webp'" :bank-accounts="bankAccounts"></MultipleBankAccounts>
-        <NewRsvpWithAttendance :bg-path="'bg-darmaayu/bg-galeri.webp'" :ownerName="ownerSlug" :ceremonyName="'Pawiwahan'"></NewRsvpWithAttendance>
+        <BlackNamaMempelai :bg-path="'bg-gededewayu/bg-galeri.webp'" :folder-path="'gededewayu'" :urutPutra="5" :urutPutri="2" :nama-pria="'I Gede Darmanidiawan'" :nama-wanita="'Dewa Ayu Dwi Astiti Satrianingrum'" :ayah-pria="'Ketut Suteja (Alm)'" :ibu-pria="'Ni Luh Dadi'" :ayah-wanita="'I Dewa Nyoman Adnyana (Alm)'" :ibu-wanita="'Luh Widiasih Candradewi'" :alamat-wanita="'Jalan Pulau Obi, Banyuning, Buleleng'" :alamat-pria="'Br. Dinas Wanasari, Ds. Tigawasa, Buleleng'"></BlackNamaMempelai>
+        <HariResepsi :bg-path="'bg-gededewayu/bg-acara.webp'" :rsp-date="'03/09/2026'" :rsp-time-range="'14:00 - Selesai'" :venue-address="'Br. Dinas Wanasari, Ds. Tigawasa, Buleleng'" :maps-link="'https://maps.app.goo.gl/TTPFWudcZBDz4Wws6?g_st=iw'"></HariResepsi>
+        <GalerryRandomLayout :bg-path="'bg-gededewayu/bg-galeri.webp'" :total-images="35" :folder-path="'gededewayu/galeri'"></GalerryRandomLayout>
+        <MultipleBankAccounts :bg-path="'bg-gededewayu/bg-galeri.webp'" :bank-accounts="bankAccounts"></MultipleBankAccounts>
+        <NewRsvpWithAttendance :bg-path="'bg-gededewayu/bg-galeri.webp'" :ownerName="ownerSlug" :ceremonyName="'Pawiwahan'"></NewRsvpWithAttendance>
         <MagatraCopyright></MagatraCopyright>
         <audio loop class="hidden" preload="none" id="bgm" controlsList="nodownload" controls>
           <source src="../assets/music/Banda_Neira_-_Sampai_Jadi_Debu.mp3" type="audio/mp3" />
@@ -145,7 +147,7 @@ const bankAccounts = [
 }
 
 .background-sampul {
-  background-image: url("../assets/photo/bg-darmaayu/bg-sampul.webp");
+  background-image: url("../assets/photo/bg-gededewayu/bg-sampul.webp");
   background-size: cover;
   background-position: center;
 }
