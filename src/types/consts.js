@@ -5,3 +5,9 @@ export const attendanceOptions = {
     0: "Tidak hadir",
     2: "Masih ragu"
 }
+
+export const bankIconSvg = {
+    "bca": "bca.svg",
+    "bpd-bali": "bpd-bali.svg",
+    // Add more bank icons as needed
+};

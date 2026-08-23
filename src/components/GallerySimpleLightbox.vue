@@ -1,28 +1,31 @@
-<script setup>
-import { ref, onMounted } from "vue";
+<script>
+import { ref, onMounted, computed } from "vue";
 import "simplelightbox/dist/simple-lightbox.min.css";
 import SimpleLightbox from "simplelightbox";
 
-const { images } = defineProps({
-  images: {
-    type: Array,
-    required: true,
+export default {
+  props: {
+    images: {
+      type: Array,
+      required: true,
+    },
   },
-});
+  setup(props) {
+    const visibleCount = ref(6);
+    let gallery;
 
-const visibleCount = ref(6);
-console.log("visibleCount " + visibleCount.value);
+    onMounted(() => {
+      gallery = new SimpleLightbox(".simple-lg-gallery", {
+        showCounter: false,
+        fileExt: "png|jpg|jpeg|gif|webp",
+      });
+      gallery.refresh();
+    });
 
-let gallery;
-
-onMounted(async () => {
-  gallery = new SimpleLightbox(".simple-lg-gallery", {
-    showCounter: false,
-    fileExt: "png|jpg|jpeg|gif|webp",
-  });
-
-  gallery.refresh();
-});
+    const imgs = computed(() => props.images);
+    return { visibleCount, imgs };
+  },
+};
 </script>
 
 <template>
@@ -30,7 +33,7 @@ onMounted(async () => {
     class="simple-lg-gallery flex flex-row w-full flex-wrap lg:gap-6 gap-5 justify-center overflow-y-hidden animated"
   >
     <a
-      v-for="(img, i) in images.slice(0, visibleCount)"
+      v-for="(img, i) in imgs.slice(0, visibleCount)"
       :key="i"
       :href="img.href"
     >
@@ -50,7 +53,7 @@ onMounted(async () => {
       </div>
     </a>
     <a
-      v-for="(img, i) in images.slice(6, images.length)"
+      v-for="(img, i) in imgs.slice(6, imgs.length)"
       :key="i"
       :href="img.href"
     >

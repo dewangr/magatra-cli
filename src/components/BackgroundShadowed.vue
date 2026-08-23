@@ -1,23 +1,24 @@
-<script setup>
-import { defineComponent } from "vue";
-
-defineComponent({
+<script>
+export default {
   name: "backgroundShadowed",
-});
-defineProps({
-  fileName: {
-    type: String,
-    required: false,
-    default: "sampul-1.webp",
+  props: {
+    fileName: {
+      type: String,
+      required: false,
+      default: "sampul-1.webp",
+    },
+    folderName: {
+      type: String,
+      required: false,
+      default: "sampul",
+    },
   },
-  folderName: {
-    type: String,
-    required: false,
-    default: "sampul",
+  computed: {
+    imgUrl() {
+      return `../assets/photo/${this.folderName}/${this.fileName}`;
+    },
   },
-});
-
-const imgUrl = `../asserts/photo/${folderName}/${fileName}`;
+};
 </script>
 <template>
   <div class="h-screen">

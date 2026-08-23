@@ -30,51 +30,47 @@
   <Gallery class="to display" :list="images" :config="{ immediate: false }" />
 </template>
 
-<script setup>
+<script>
 import "@/assets/main.css";
 import { setGallery, Gallery } from "vue-preview-imgs";
-import { ref, onMounted } from "vue";
 
-const { images, galleryID } = defineProps({
-  images: {
-    type: Array,
-    required: true,
-  },
-  galleryID: {
-    type: String,
-    default: "gallery",
-  },
-});
-
-console.log("Gallery component initialized");
-console.log(images);
-
-const list = images;
-
-const lightbox = setGallery(
-  {
-    dataSource: images,
-  },
-  {
-    immediate: false,
-    beforeInit(lightbox) {
-      lightbox.addFilter("thumbEl", (thumbEl, data, index) => {
-        const el = document.querySelectorAll(".open-btn")[index];
-        if (el) {
-          return el;
-        }
-        return thumbEl;
-      });
+export default {
+  components: { Gallery },
+  props: {
+    images: {
+      type: Array,
+      required: true,
     },
-  }
-);
-
-const handleOpen = (index) => {
-  lightbox.loadAndOpen(index);
+    galleryID: {
+      type: String,
+      default: "gallery",
+    },
+  },
+  mounted() {
+    this.lightbox = setGallery(
+      {
+        dataSource: this.images,
+      },
+      {
+        immediate: false,
+        beforeInit: (lightbox) => {
+          lightbox.addFilter("thumbEl", (thumbEl, data, index) => {
+            const el = document.querySelectorAll(".open-btn")[index];
+            if (el) {
+              return el;
+            }
+            return thumbEl;
+          });
+        },
+      }
+    );
+  },
+  methods: {
+    handleOpen(index) {
+      if (this.lightbox) this.lightbox.loadAndOpen(index);
+    },
+  },
 };
-
-console.log("list initialized");
-console.log(list);
 </script>
 
 <style>

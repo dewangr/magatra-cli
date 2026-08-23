@@ -1,67 +1,62 @@
-<script setup>
+<script>
 import "@/assets/main.css";
 
-const props = defineProps({
-  images: {
-    type: Array,
-    required: true,
+export default {
+  props: {
+    images: {
+      type: Array,
+      required: true,
+    },
   },
-});
+  data() {
+    return { slideIndex: 1 };
+  },
+  mounted() {
+    this.showSlides(this.slideIndex);
+  },
+  methods: {
+    openModal() {
+      const modal = document.getElementById("myModal");
+      if (modal) {
+        modal.style.display = "block";
+        modal.style.position = "fixed";
+      }
+    },
+    closeModal() {
+      const modal = document.getElementById("myModal");
+      if (modal) modal.style.display = "none";
+    },
+    plusSlides(n) {
+      this.showSlides((this.slideIndex += n));
+    },
+    currentSlide(n) {
+      this.showSlides((this.slideIndex = n));
+    },
+    showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (!slides.length || !dots.length) return;
 
-console.log("LightboxSimple component initialized");
-console.log(props.images);
-
-// Open the Modal
-function openModal() {
-  console.log("modal opened");
-  const modal = document.getElementById("myModal");
-  modal.style.display = "block";
-  modal.style.position = "fixed";
-}
-
-// Close the Modal
-function closeModal() {
-  console.log("modal closed");
-  const modal = document.getElementById("myModal");
-  modal.style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (!slides.length || !dots.length) return;
-
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  captionText.innerHTML = dots[slideIndex - 1].alt;
-}
+      if (n > slides.length) {
+        this.slideIndex = 1;
+      }
+      if (n < 1) {
+        this.slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[this.slideIndex - 1].style.display = "block";
+      dots[this.slideIndex - 1].className += " active";
+      if (captionText) captionText.innerHTML = dots[this.slideIndex - 1].alt;
+    },
+  },
+};
 </script>
 <template>
   <!-- Images used to open the lightbox -->

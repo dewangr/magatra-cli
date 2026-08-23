@@ -9,6 +9,7 @@ export async function getDataRsvpByOwner(ownerName) {
   try {
     const response = await axios.get(endpoint);
     rspvData.value = response.data.data;
+    console.log("Data fetched successfully:", rspvData.value);
     return rspvData;
   } catch (error) {
     console.error("There has been a problem with your fetch operation:", error);

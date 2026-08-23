@@ -28,6 +28,7 @@ let carouselSlides = [];
 let imagePath = `/photos/${props.folderPath}/carousel`;
 
 for (let i = 1; i <= props.totalImages; i++) {
+  console.log(`${imagePath} (${i}).webp`);
   carouselSlides.push(`${imagePath} (${i}).webp`);
 }
 
@@ -57,7 +58,7 @@ for (let i = 1; i <= props.totalImages; i++) {
       </div>
       <div class="main-content absolute inset-0 z-10 flex flex-col justify-between items-center py-10">
         <div class="z-20 relative flex flex-col py-6 mt-6 ">
-            <NamaPengantinDynalight class="animated text-4xl mb-4" :bride-name="'Saktu'" :groom-name="'Ode'"
+            <NamaPengantinDynalight class="animated text-4xl mb-4" :bride-name="props.brideName" :groom-name="props.groomName"
             :title-text="'Pawiwahan'" />
         </div>
         <div

@@ -10,7 +10,7 @@ import dayjs from "dayjs";
 const props = defineProps({
     bgPath: {
         type: String,
-            // default: "bg-odesaktu",
+            default: "bg-odesaktu",
             required:true,
     },
     rspDate: {
@@ -83,7 +83,7 @@ let bgImage = require(`../../assets/photo/${props.bgPath}`);
                         rel="noopener">
                         Google Maps
                     </a>
-                    <iframe class="animated max-w-80 h-60 mt-10 rounded-md" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3949.9962391189533!2d115.10309707412593!3d-8.101863681040081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMDYnMDYuNyJTIDExNcKwMDYnMjAuNCJF!5e0!3m2!1sen!2sid!4v1773325486261!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class="animated max-w-80 h-60 mt-10 rounded-md" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3948.838369654725!2d115.0369552750096!3d-8.219004391813488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMTMnMDguNCJTIDExNcKwMDInMjIuMyJF!5e0!3m2!1sen!2sid!4v1787351984416!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>

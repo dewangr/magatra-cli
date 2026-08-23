@@ -30,7 +30,9 @@
     let rspvData = ref([]);
 
     async function loadRsvpData() {
+        console.log("Loading RSVP data for owner:", props.ownerName);
         const data = await getDataRsvpByOwner(props.ownerName);
+        console.log(data);
         if (data && data.value) {
             rspvData.value = data.value;
         }
@@ -73,7 +75,7 @@
                 alt="..."
             />
             <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
-            <div class="kartu-ucapan relative z-20 py-8 flex px-5 flex-col overflow-y-scroll animated">
+            <div class="kartu-ucapan relative z-60 py-8 flex px-5 flex-col overflow-y-scroll animated">
                 <WhiteTransparentBubble class="mb-5 bg-putih-keabuan/70 backdrop-blur-md rounded-sm text-start animated" 
                 v-for="(data, id) in rspvData" :key="id" :guestName="data.guestName" :guestMessage="data.guestMessage" :commentsTimestamp="data.created_at" :attendanceEnum="data.guestAttendance"/>
             </div>

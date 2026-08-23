@@ -27,6 +27,7 @@ const attendanceStatus = attendanceOptions[props.attendanceEnum];
 const commentsTime = ref("");
 let intervalId;
 onMounted(() => {
+  console.log('WhiteTransparentBubble mounted with props:', props);
   commentsTime.value = updateCommentsTimestamp(props.commentsTimestamp);
   intervalId = setInterval(() => {
     commentsTime.value = updateCommentsTimestamp(props.commentsTimestamp);
@@ -42,14 +43,19 @@ onUnmounted(() => {
       <p class="namaTamuReservasi text-alt-dark tracking-wider text-sm">
         <b>{{ guestName }} &nbsp;</b>
       </p>
-     <span :hidden="!props.attendanceEnum" class="bg-alt-dark/70 backdrop-blur-md text-off-white w-max px-2 py-1 rounded-xl text-[11px] flex items-center"> <i
-                   aria-hidden="true"></i> &nbsp; {{
-                        attendanceStatus
-                    }}</span>
+      <span :hidden="!props.attendanceEnum"
+        class="bg-alt-dark/70 backdrop-blur-md text-off-white w-max px-2 py-1 rounded-xl text-[11px] flex items-center">
+        <i aria-hidden="true"></i> &nbsp; {{
+          attendanceStatus
+        }}</span>
     </div>
     <p class="text-sm text-alt-dark mb-1">{{ guestMessage }}</p>
     <p class="text-[10px] text-alt-dark/50 italic">{{ commentsTime }}</p>
   </div>
 </template>
-<style scoped>
+<style scoped>/* Temporary force-visible debug styles - remove after debugging */
+.textUcapan {
+  z-index: 999999 !important;
+  opacity: 1 !important;
+}
 </style>
