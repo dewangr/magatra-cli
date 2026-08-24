@@ -79,7 +79,7 @@ let bgImage = require(`../../assets/photo/${props.bgPath}`);
                                 bg-gradient-to-r from-off-white/25 to-transparent blur-xl"></div>
 
                                 <div class="rounded-full overflow-hidden relative z-10 border-2 border-off-white/70">
-                                    <img :src="bgGroom" class="w-48 h-48 object-cover scale-125 rounded-full" />
+                                    <img :src="bgGroom" class="w-48 h-48 object-cover scale-150 rounded-full" style="object-position: center 68%;" />
                                 </div>
                             </div>
                         </div>
