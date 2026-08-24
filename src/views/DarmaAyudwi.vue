@@ -119,7 +119,7 @@ const bankAccounts = [
         <OmSwastyastuText></OmSwastyastuText>
         <BlackNamaMempelai :bg-path="'bg-gededewayu/bg-galeri.webp'" :folder-path="'gededewayu'" :urutPutra="5" :urutPutri="2" :nama-pria="'I Gede Darmanidiawan'" :nama-wanita="'Dewa Ayu Dwi Astiti Satrianingrum'" :ayah-pria="'Ketut Suteja (Alm)'" :ibu-pria="'Ni Luh Dadi'" :ayah-wanita="'I Dewa Nyoman Adnyana (Alm)'" :ibu-wanita="'Luh Widiasih Candradewi'" :alamat-wanita="'Jalan Pulau Obi, Banyuning, Buleleng'" :alamat-pria="'Br. Dinas Wanasari, Ds. Tigawasa, Buleleng'"></BlackNamaMempelai>
         <HariResepsi :bg-path="'bg-gededewayu/bg-acara.webp'" :rsp-date="'03/09/2026'" :rsp-time-range="'14:00 - Selesai'" :venue-address="'Br. Dinas Wanasari, Ds. Tigawasa, Buleleng'" :maps-link="'https://maps.app.goo.gl/TTPFWudcZBDz4Wws6?g_st=iw'"></HariResepsi>
-        <GalerryRandomLayout :bg-path="'bg-gededewayu/bg-galeri.webp'" :total-images="35" :folder-path="'gededewayu/galeri'"></GalerryRandomLayout>
+        <GalerryRandomLayout :bg-path="'bg-gededewayu/bg-galeri.webp'" :total-images="30" :folder-path="'gededewayu/galeri'"></GalerryRandomLayout>
         <MultipleBankAccounts :bg-path="'bg-gededewayu/bg-galeri.webp'" :bank-accounts="bankAccounts"></MultipleBankAccounts>
         <NewRsvpWithAttendance :bg-path="'bg-gededewayu/bg-galeri.webp'" :ownerName="ownerSlug" :ceremonyName="'Pawiwahan'"></NewRsvpWithAttendance>
         <MagatraCopyright></MagatraCopyright>
